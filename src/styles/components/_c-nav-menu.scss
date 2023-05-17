@@ -5,10 +5,10 @@
   background: $nav-background;
   background: $nav-background-gradient-fallback;
   background: $nav-background-gradient;
-  transition: all .2s;
+  transition: all 0.2s;
   width: 0;
   height: 0;
-  opacity: .0;
+  opacity: 0;
   box-shadow: $box-shadow;
 
   .p-button-label {
@@ -31,17 +31,15 @@
   .p-button.p-button-link:enabled:focus {
     box-shadow: none;
   }
-
 }
 
 //media
 
 @include respond-below(md) {
   .c-nav-menu {
-    transition: all .2s;
+    transition: all 0.2s;
     width: 100%;
     height: 100%;
     opacity: 1;
-
   }
 }
