@@ -1,2 +1,2 @@
-# live-is-multimedia
+# life-is-multimedia
 New Multimedia Portfolio App  (inspired by CSS Garden)
