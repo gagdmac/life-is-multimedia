@@ -1,0 +1,224 @@
+//backgorund
+.u-background-black {
+  background: $background-black;
+}
+
+.u-background-transparent {
+  background: transparent;
+}
+
+//fonts
+.u-text-uppercase {
+  text-transform: uppercase;
+}
+
+.u-text-capilatize {
+  text-transform: capitalize;
+}
+
+.u-text-bold {
+  font-weight: 700;
+}
+
+.u-label-color {
+  color: $c-primary;
+}
+
+//font color
+.u-color-primary {
+  color: $c-primary;
+}
+
+.u-color-white {
+  color: $c-white;
+}
+
+//font-sized
+.u-font-h1 {
+  font-size: rem-calc(24) !important;
+}
+
+//MARINGS
+
+//top
+.u-mt-05 {
+  margin-top: rem-calc(2.4);
+}
+
+.u-mt-5 {
+  margin-top: rem-calc(5) !important;
+}
+
+//left
+.u-ml-5 {
+  margin-left: rem-calc(5);
+}
+
+//right
+
+
+//no margin left right top bottom
+.u-none-ml {
+  margin-left: 0 !important;
+}
+
+.u-none-mr {
+  margin-right: 0 !important;
+}
+
+.u-none-mt {
+  margin-top: 0 !important;
+}
+
+.u-none-mb {
+  margin-bottom: 0 !important;
+}
+
+
+
+//margin minus
+
+.u-minus-6 {
+  margin-top: rem-calc(-9.6) !important;
+}
+
+.u-minus-4 {
+  margin-top: rem-calc(-6.4) !important;
+}
+
+.u-minus-10 {
+  margin-top: rem-calc(-10) !important;
+}
+
+.u-minus-13 {
+  margin-top: rem-calc(-13.6) !important;
+}
+
+.u-minus-relative {
+  position: relative;
+  top: rem-calc(-4.8);
+}
+
+.u-minus-42 {
+  @include respond-between(sm, md) {
+    margin-top: rem-calc(-42)
+  }
+
+  @include respond-above(md) {
+    margin-top: rem-calc(-42)
+  }
+
+  @include respond-below(sm) {
+    margin-top: rem-calc(0)
+  }
+
+  @include respond-between(xs, sm) {
+    margin-top: rem-calc(-42)
+  }
+
+  @include respond-below(zx) {
+    margin-top: rem-calc(-55)
+  }
+}
+
+.u-right-5h {
+  margin-right: rem-calc(88) !important;
+}
+
+//PADDINGS
+
+//no padding
+.u-none-p {
+  padding: 0 !important;
+}
+
+//no padding left-right
+.u-none-pl {
+  padding-left: 0 !important;
+}
+
+.u-none-pr {
+  padding-right: 0 !important;
+}
+
+.u-none-pt {
+  padding-top: 0 !important;
+}
+
+.u-none-pb {
+  padding-bottom: 0 !important;
+}
+
+//BORDER-RADIUS
+.u-border-r {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+//full height
+.u-full-height {
+  height: 100vh;
+}
+
+//z-index
+.u-zindex {
+  z-index: 10000;
+}
+
+
+//mandatory
+.u-mandatory {
+  font-weight: 700;
+  color: $c-red;
+  font-size: rem-calc(12);
+  position: relative;
+  top: rem-calc(-3);
+}
+
+//position
+.u-absolute {
+  position: absolute;
+}
+
+.u-relative {
+  position: relative;
+}
+
+//Width
+.u-vw-56 {
+  width: 56vw !important;
+}
+
+//////////////////////////////////////
+/////////RESPONSIVE UTILITIES/////////
+/////////////////////////////////////
+
+
+//DISPLAY ABOVE
+
+//md
+@include respond-above(md) {
+  .u-no-display-md-above {
+    display: none;
+  }
+
+  .u-margin-left-nombre {
+    margin-left: rem-calc(91);
+  }
+}
+
+
+//DISPLAY BELOW
+
+//sm
+@include respond-below(sm) {
+  .u-full-width {
+    width: 100%;
+  }
+
+  .u-background-grey {
+    background: $background-grey;
+  }
+}

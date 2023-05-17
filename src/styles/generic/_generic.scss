@@ -1,0 +1,541 @@
+/*======================================================================
+========================================================================
+========================================================================*/
+/*** The new CSS Reset - version 1.4.2 (last updated 30.11.2021) ***/
+/*======================================================================
+========================================================================
+========================================================================*/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/*  Remove list styles on ul, ol elements with a class attribute*/
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html {
+  color: #015b8f
+}
+
+/* Set core body defaults */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+
+/* Natural flow and rhythm in articles by default */
+article>*+* {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+/*======================================================================
+=====================The new CSS Reset ENDS=============================
+========================================================================*/
+
+
+////////////////////////////////////////////////////////////
+////////////////// Accesibility ////////////////////////////
+//////////////////////////////////////////////////////////
+.sr-only {
+  position: absolute;
+  width: rem-calc(1);
+  height: rem-calc(1);
+  padding: 0;
+  margin: rem-calc(-1);
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+.skiplink {
+  background: transparent;
+  color: #212121;
+  left: 0;
+  padding: rem-calc(16 24);
+  position: absolute;
+  top: -rem-calc(-72);
+  transition: all 0.2s ease-in-out;
+  z-index: 1040 !important;
+  text-decoration: underline !important;
+}
+
+.skiplink:focus {
+  background: #ffffff;
+  left: 0;
+  outline: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Styles where only focus is supported */
+input:focus,
+button:focus,
+a[href]:focus {
+  outline: #7fb7ff dotted rem-calc(3);
+  outline-offset: rem-calc(2);
+}
+
+/* Reset styles where focus-visible is supported (we'll add them back
+ * in the next block)
+*/
+input:focus,
+button:focus:not(:focus-visible),
+a[href]:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* The final, focus-visible styles. You could elect to make this even more
+ * obvious, if stakeholders or whomever is pushing against focus styles this
+ * week are now off your back.
+*/
+input:focus,
+button:focus-visible,
+a[href]:focus-visible {
+  outline: #7fb7ff dotted rem-calc(3);
+  outline-offset: rem-calc(2);
+}
+
+
+////////////////////////////////////////////////////////////
+////////////////// GENERAL CLASES /////////////////////////
+//////////////////////////////////////////////////////////
+
+html,
+body {
+  font-family: Roboto, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  // min-height: 100vh;
+  // overflow: auto !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+section {
+  background-color: $background-aside;
+}
+
+
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: none;
+}
+
+fieldset {
+  display: contents;
+}
+
+label,
+legend {
+  margin-bottom: 0;
+
+  &.label {
+    position: relative;
+    bottom: rem-calc(7);
+    left: rem-calc(5);
+  }
+
+  &.left-label {
+    color: $c-primary-dark;
+    font-weight: bold;
+    align-self: center;
+  }
+}
+
+
+.panel-subTitle {
+  color: $c-primary;
+  border-bottom: rem-calc(1) solid $c-primary;
+  padding: rem-calc(0);
+  margin-bottom: rem-calc(32);
+  font-weight: 700;
+  font-size: rem-calc(18);
+  background: $background-blue-light;
+}
+
+.panel-subTitle-dialog {
+  color: $c-primary;
+  border-bottom: rem-calc(1) solid $c-primary;
+  padding: rem-calc(0 10);
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: rem-calc(18);
+  background: $background-blue-light;
+}
+
+
+.panel-subTitle-lighter {
+  color: $c-primary;
+  border-bottom: rem-calc(1) solid $nav-background-light;
+  padding: rem-calc(0);
+  margin-bottom: rem-calc(32);
+  font-weight: 500;
+  font-size: rem-calc(16);
+  background: $background-blue-lighter;
+}
+
+button {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  &.mlInputs {
+    margin-left: 1% !important;
+  }
+}
+
+input [type=text],
+input {
+  width: 100%;
+  position: relative;
+
+  &.inputIcon {
+    width: calc(100% - 3.5rem);
+  }
+
+  &.inputIcons {
+    width: calc(100% - 6.4rem);
+  }
+
+  &.inputIconText {
+    width: calc(100% - 9rem);
+  }
+}
+
+
+////////////////////////////////////////////////////////////
+////////////////// SPECIFIC CLASES /////////////////////////
+//////////////////////////////////////////////////////////
+
+//white fonts icons
+.font-white {
+  color: $c-white;
+}
+
+
+
+////////////////////////////////////////////////////////////
+///////// ERROR PAGES 400 403 404 405 500 /////////////////
+//////////////////////////////////////////////////////////
+
+.big-notice {
+  text-align: center;
+  border: none;
+  margin-bottom: rem-calc(20);
+  font-size: rem-calc(32);
+  padding: rem-calc(15 20 0);
+  font-weight: 700;
+  color: $c-primary;
+  text-transform: uppercase;
+}
+
+.normal-notice {
+  text-align: center;
+  border: none;
+  margin-bottom: rem-calc(20);
+  font-size: rem-calc(20);
+  padding: rem-calc(2 0);
+  font-weight: 400;
+  color: $c-primary;
+  text-transform: uppercase;
+}
+
+.notice {
+  border: none;
+  margin-bottom: rem-calc(20);
+  font-size: rem-calc(19.5);
+  padding: rem-calc(2 0);
+  font-weight: 700;
+  color: $c-primary;
+  text-transform: uppercase;
+}
+
+.alert {
+  border-radius: 0;
+}
+
+
+/*====================================*/
+
+
+.btn {
+  border-radius: 0;
+  background-color: #2196F3;
+  color: white;
+  padding: rem-calc(16);
+  font-size: rem-calc(16);
+  border: none;
+  outline: none;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: rem-calc(160);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: rem-calc(12 16);
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btn:hover,
+.dropdown:hover .btn {
+  background-color: #0b7dda;
+}
+
+/////////////////////////////////////////////////
+//////////////////VALIDACIONES//////////////////
+///////////////////////////////////////////////
+
+//form controls
+
+.error-control {
+
+  .p-dropdown {
+    background: #ffffff;
+    border: none;
+    transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
+    border-radius: rem-calc(4);
+  }
+
+  .p-inputtext {
+    border: none;
+  }
+
+  .form-control {
+    height: auto;
+    padding: 0;
+  }
+
+
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-color: $c-error !important;
+}
+
+
+//============================
+// ===========login===========
+// ===========================
+
+.login {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  &--user {
+    padding: rem-calc(7 0);
+  }
+
+  //media
+  @include respond-above(md) {
+    &--user {
+      padding: rem-calc(10 0);
+    }
+  }
+
+  //media
+  @include respond-below(sm) {
+    &--user {
+      padding: rem-calc(4 0);
+    }
+  }
+
+  &--name {
+    padding: rem-calc(7 0);
+    left: 0px;
+  }
+}
+
+//============================
+// ========healthcheck========
+// ===========================
+
+.healthCheckPanel {
+  width: 600px;
+}
+
+
+//=================================================
+// ========Oculta / Mostrar resultados=============
+//=================================================
+
+.ocultar-resultados {
+  visibility: hidden;
+  display: none;
+}
+
+.mostrar-resultados {
+  visibility: visible;
+}
+
+//=======================================================================
+// =========== Radio buttons / Informes -validaciones items =============
+//=======================================================================
+
+.radioButtons {
+  display: inherit;
+
+  @include respond-below(zx) {
+    flex-direction: column;
+  }
+}
+
+//=======================================
+// =========== SKIP CONTENT =============
+//=======================================
+
+a.skip-to-content {
+  color: $primary-background-color !important;
+  color: #f1f1f1;
+  font-size: rem-calc(11);
+  position: absolute;
+  top: rem-calc(8);
+  left: rem-calc(140);
+  z-index: 1031;
+  font-weight: 400;
+  padding-top: rem-calc(2);
+
+  &:focus {
+    outline: $focus !important;
+    box-shadow: none !important;
+    outline-style: $f-style;
+    outline-offset: rem-calc(1) !important;
+    color: #fff !important;
+  }
+}
+
+@media print {
+  .no-print {
+    visibility: hidden;
+  }
+}
+
+
+
+//=======================================
+// =========== TOGGLE COMPONENTS ========
+//=======================================
+
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: block;
+}
+
+
+//=======================================
+// =========== Dropdown ========
+//=======================================
+.p-dropdown-empty {
+  height: 100%;
+}

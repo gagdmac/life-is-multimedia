@@ -1,0 +1,47 @@
+//////////////////////////////////
+/////TOP RESPONSIVE NAV MENU//////
+//////////////////////////////////
+.c-nav-menu {
+  background: $nav-background;
+  background: $nav-background-gradient-fallback;
+  background: $nav-background-gradient;
+  transition: all .2s;
+  width: 0;
+  height: 0;
+  opacity: .0;
+  box-shadow: $box-shadow;
+
+  .p-button-label {
+    display: none;
+  }
+
+  button {
+    border-radius: 0;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:focus {
+      outline-offset: $f-style;
+      outline: $focus;
+    }
+  }
+
+  .p-button.p-button-link:enabled:focus {
+    box-shadow: none;
+  }
+
+}
+
+//media
+
+@include respond-below(md) {
+  .c-nav-menu {
+    transition: all .2s;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+
+  }
+}

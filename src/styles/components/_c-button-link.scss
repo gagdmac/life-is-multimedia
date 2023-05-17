@@ -1,0 +1,26 @@
+.button-link.p-button.p-button-link:enabled {
+  margin: rem-calc(0 20 0 0);
+  color: $c-white;
+  padding: rem-calc(9.5 20) !important;
+  font-size: rem-calc(11);
+  text-decoration: none;
+  border-radius: 0;
+}
+
+.button-link.p-button.p-button-link:enabled:hover {
+  color: $c-white;
+  background: $background-black;
+}
+
+.button-link.p-button.p-button-link:enabled:focus {
+  outline: $focus;
+  outline-offset: $f-style !important;
+}
+
+//Size below 768px
+@include respond-below(lg) {
+  .button-link.p-button.p-button-link:enabled {
+    margin-left: rem-calc(50);
+
+  }
+}
