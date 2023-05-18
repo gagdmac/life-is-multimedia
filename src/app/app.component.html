@@ -1,6 +1,7 @@
 <header class="fixed-top no-print">
   <!-- <a (click)="scroll(content)" class="skip-to-content pl-2 pr-2">Skip to main content</a> -->
   <nav>
+    <app-side-menu></app-side-menu>
     <!-- <app-topmenu></app-topmenu> -->
   </nav>
   <div class="c-nav-menu u-none-p u-zindex menu">
@@ -17,7 +18,7 @@
   <aside class="u-none-p no-print">
     <!-- [ngClass]="isExpanding ? 'expanding': 'notexpanding'" -->
     <section class="aside">
-      <app-side-menu class="mt-5"></app-side-menu>
+      <app-side-menu></app-side-menu>
     </section>
   </aside>
   <main #content id="content" class="col p-4 pb-5">
