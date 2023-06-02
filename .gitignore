@@ -1,7 +1,6 @@
 node_modules
 # ignore all logs
 *.log
-.angular
 
     bazel-*
 test-project-host-*
@@ -54,3 +53,4 @@ yarn-error.log*
 # Mac OSX Finder files.
 **/.DS_Store
 .DS_Store
+.angular
