@@ -10,6 +10,8 @@ import { WebDesignComponentComponent } from "./feature/web-design-component/web-
 import { AnimationComponentComponent } from "./feature/animation-component/animation-component.component";
 import { VideoProductionComponentComponent } from "./feature/video-production-component/video-production-component.component";
 import { UserExperienceDesignComponentComponent } from "./feature/user-experience-design-component/user-experience-design-component.component";
+import { InteractionDesignComponent } from "./feature/interaction-design/interaction-design.component";
+import { TopmenuComponent } from './core/side-menu/topmenu/topmenu.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { UserExperienceDesignComponentComponent } from "./feature/user-experienc
     VideoProductionComponentComponent,
     UserExperienceDesignComponentComponent,
     SideMenuComponent,
+    InteractionDesignComponent,
+    TopmenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +47,10 @@ import { UserExperienceDesignComponentComponent } from "./feature/user-experienc
       {
         path: "user-experience-design",
         component: UserExperienceDesignComponentComponent,
+      },
+      {
+        path: "interaction-design",
+        component: InteractionDesignComponent,
       },
     ]),
   ],

@@ -2,17 +2,17 @@
   <!-- <a (click)="scroll(content)" class="skip-to-content pl-2 pr-2">Skip to main content</a> -->
   <nav>
     <app-side-menu></app-side-menu>
-    <!-- <app-topmenu></app-topmenu> -->
+    <app-topmenu></app-topmenu>
   </nav>
-  <div class="c-nav-menu u-none-p u-zindex menu">
-    <button pButton type="button" class="p-button-link">
-      <!-- (click)="toggleSideBar()" -->
-      <span class="sr-only">Side Menu Open/close</span>
-      <span class="font-white noBorder">
-        <!-- [ngClass]="isExpanding ? 'pi pi-times': 'pi pi-bars'" -->
-      </span>
-    </button>
-  </div>
+  <!-- <div class="c-nav-menu u-none-p u-zindex menu"> -->
+  <!-- <button pButton type="button" class="p-button-link"> -->
+  <!-- (click)="toggleSideBar()" -->
+  <!-- <span class="sr-only">Side Menu Open/close</span> -->
+  <!-- <span class="font-white noBorder"> -->
+  <!-- [ngClass]="isExpanding ? 'pi pi-times': 'pi pi-bars'" -->
+  <!-- </span> -->
+  <!-- </button> -->
+  <!-- </div> -->
 </header>
 <section class="c-wrapper">
   <aside class="u-none-p no-print">
@@ -21,7 +21,7 @@
       <app-side-menu></app-side-menu>
     </section>
   </aside>
-  <main #content id="content" class="col p-4 pb-5">
+  <main #content id="content" class="">
     <router-outlet>
       <div class="no-print">
         <!-- [ngClass]="isExpanding ? 'overlay': ''" -->
