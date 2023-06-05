@@ -1,3 +1,7 @@
+.cb1 {
+  border: 1px solid red;
+}
+
 /*======================================================================
 ========================================================================
 ========================================================================*/
@@ -190,179 +194,179 @@ html,
 body {
   font-family: Roboto, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   min-height: 100vh;
-
   overflow: auto !important;
+  padding: 10px;
 }
 
-////////////////////////////////////////////////////////////
-////////////////// GENERAL colors /////////////////////////
-//////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////
+// ////////////////// GENERAL colors /////////////////////////
+// //////////////////////////////////////////////////////////
 
-////////////////// light colors /////////////////////////
-body {
-  background: linear-gradient(
-    45deg,
-    rgba(255, 203, 160, 1),
-    rgba(160, 174, 255, 1)
-  );
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.allHeight {
-  height: 100vh;
-}
-
-/* Light Mode Styles */
-
-/* Graphic Design */
-.graphic-design {
-  background: linear-gradient(
-    45deg,
-    rgba(255, 122, 51, 1),
-    rgba(51, 76, 255, 1)
-  );
-  color: #ffffff;
-}
-
-/* Web Design */
-.web-design {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 109, 160, 1),
-    rgba(160, 109, 255, 1)
-  );
-  color: #000000;
-}
-
-/* Animation */
-.animation {
-  background: linear-gradient(
-    225deg,
-    rgba(255, 255, 51, 1),
-    rgba(51, 255, 255, 1)
-  );
-  color: #000000;
-}
-
-/* Video Production */
-.video-production {
-  background: linear-gradient(
-    315deg,
-    rgba(143, 255, 51, 1),
-    rgba(51, 76, 255, 1)
-  );
-  color: #000000;
-}
-
-/* User Experience Design */
-.user-experience-design {
-  background: linear-gradient(
-    60deg,
-    rgba(255, 51, 238, 1),
-    rgba(51, 255, 128, 1)
-  );
-  color: #000000;
-}
-
-/* Interaction Design */
-.interaction-design {
-  background: linear-gradient(
-    120deg,
-    rgba(51, 189, 255, 1),
-    rgba(255, 51, 51, 1)
-  );
-  color: #000000;
-}
-
-////////////////// dark colors /////////////////////////
-
+// ////////////////// light colors /////////////////////////
 // body {
-//   background: linear-gradient(45deg, rgba(40, 58, 75, 1), rgba(18, 31, 40, 1));
+//   background: linear-gradient(
+//     45deg,
+//     rgba(255, 203, 160, 1),
+//     rgba(160, 174, 255, 1)
+//   );
 //   background-size: 400% 400%;
 //   animation: gradientAnimation 15s ease infinite;
 // }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-/* Graphic Design */
-.graphic-design {
-  background: linear-gradient(
-    45deg,
-    rgba(255, 122, 51, 1),
-    rgba(67, 90, 250, 1)
-  );
-}
+// @keyframes gradientAnimation {
+//   0% {
+//     background-position: 0% 50%;
+//   }
+//   50% {
+//     background-position: 100% 50%;
+//   }
+//   100% {
+//     background-position: 0% 50%;
+//   }
+// }
 
-/* Web Design */
-.web-design {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 109, 160, 1),
-    rgba(160, 109, 255, 1)
-  );
-}
+// .allHeight {
+//   height: 100vh;
+// }
 
-/* Animation */
-.animation {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 51, 1),
-    rgba(51, 255, 255, 1)
-  );
-}
+// /* Light Mode Styles */
 
-/* Video Production */
-.video-production {
-  background: linear-gradient(
-    180deg,
-    rgba(143, 255, 51, 1),
-    rgba(67, 90, 250, 1)
-  );
-}
+// /* Graphic Design */
+// .graphic-design {
+//   background: linear-gradient(
+//     45deg,
+//     rgba(255, 122, 51, 1),
+//     rgba(51, 76, 255, 1)
+//   );
+//   color: #ffffff;
+// }
 
-/* User Experience Design */
-.user-experience-design {
-  background: linear-gradient(
-    225deg,
-    rgba(255, 51, 238, 1),
-    rgba(67, 255, 112, 1)
-  );
-}
+// /* Web Design */
+// .web-design {
+//   background: linear-gradient(
+//     135deg,
+//     rgba(255, 109, 160, 1),
+//     rgba(160, 109, 255, 1)
+//   );
+//   color: #000000;
+// }
 
-/* Interaction Design */
-.interaction-design {
-  background: linear-gradient(
-    315deg,
-    rgba(67, 189, 255, 1),
-    rgba(255, 67, 67, 1)
-  );
-}
+// /* Animation */
+// .animation {
+//   background: linear-gradient(
+//     225deg,
+//     rgba(255, 255, 51, 1),
+//     rgba(51, 255, 255, 1)
+//   );
+//   color: #000000;
+// }
 
-////////////////////////////////////////////////////////////
-////////////////// GENERAL colors  /////////////////////////
-//////////////////////////////////////////////////////////
+// /* Video Production */
+// .video-production {
+//   background: linear-gradient(
+//     315deg,
+//     rgba(143, 255, 51, 1),
+//     rgba(51, 76, 255, 1)
+//   );
+//   color: #000000;
+// }
+
+// /* User Experience Design */
+// .user-experience-design {
+//   background: linear-gradient(
+//     60deg,
+//     rgba(255, 51, 238, 1),
+//     rgba(51, 255, 128, 1)
+//   );
+//   color: #000000;
+// }
+
+// /* Interaction Design */
+// .interaction-design {
+//   background: linear-gradient(
+//     120deg,
+//     rgba(51, 189, 255, 1),
+//     rgba(255, 51, 51, 1)
+//   );
+//   color: #000000;
+// }
+
+// ////////////////// dark colors /////////////////////////
+
+// // body {
+// //   background: linear-gradient(45deg, rgba(40, 58, 75, 1), rgba(18, 31, 40, 1));
+// //   background-size: 400% 400%;
+// //   animation: gradientAnimation 15s ease infinite;
+// // }
+
+// @keyframes gradientAnimation {
+//   0% {
+//     background-position: 0% 50%;
+//   }
+//   50% {
+//     background-position: 100% 50%;
+//   }
+//   100% {
+//     background-position: 0% 50%;
+//   }
+// }
+// /* Graphic Design */
+// .graphic-design {
+//   background: linear-gradient(
+//     45deg,
+//     rgba(255, 122, 51, 1),
+//     rgba(67, 90, 250, 1)
+//   );
+// }
+
+// /* Web Design */
+// .web-design {
+//   background: linear-gradient(
+//     135deg,
+//     rgba(255, 109, 160, 1),
+//     rgba(160, 109, 255, 1)
+//   );
+// }
+
+// /* Animation */
+// .animation {
+//   background: linear-gradient(
+//     90deg,
+//     rgba(255, 255, 51, 1),
+//     rgba(51, 255, 255, 1)
+//   );
+// }
+
+// /* Video Production */
+// .video-production {
+//   background: linear-gradient(
+//     180deg,
+//     rgba(143, 255, 51, 1),
+//     rgba(67, 90, 250, 1)
+//   );
+// }
+
+// /* User Experience Design */
+// .user-experience-design {
+//   background: linear-gradient(
+//     225deg,
+//     rgba(255, 51, 238, 1),
+//     rgba(67, 255, 112, 1)
+//   );
+// }
+
+// /* Interaction Design */
+// .interaction-design {
+//   background: linear-gradient(
+//     315deg,
+//     rgba(67, 189, 255, 1),
+//     rgba(255, 67, 67, 1)
+//   );
+// }
+
+// ////////////////////////////////////////////////////////////
+// ////////////////// GENERAL colors  /////////////////////////
+// //////////////////////////////////////////////////////////
 
 // a:hover {
 //   text-decoration: none !important;
