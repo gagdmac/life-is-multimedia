@@ -12,6 +12,8 @@ import { VideoProductionComponentComponent } from "./feature/video-production-co
 import { UserExperienceDesignComponentComponent } from "./feature/user-experience-design-component/user-experience-design-component.component";
 import { InteractionDesignComponent } from "./feature/interaction-design/interaction-design.component";
 import { TopmenuComponent } from "./core/topmenu/topmenu.component";
+import { GsapExamplesComponent } from "./core/gsap-examples/gsap-examples.component";
+import { SandBoxComponent } from './core/sand-box/sand-box.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { TopmenuComponent } from "./core/topmenu/topmenu.component";
     SideMenuComponent,
     InteractionDesignComponent,
     TopmenuComponent,
+    GsapExamplesComponent,
+    SandBoxComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +55,10 @@ import { TopmenuComponent } from "./core/topmenu/topmenu.component";
       {
         path: "interaction-design",
         component: InteractionDesignComponent,
+      },
+      {
+        path: "gsap-examples",
+        component: GsapExamplesComponent,
       },
     ]),
   ],
