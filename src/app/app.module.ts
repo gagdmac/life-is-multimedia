@@ -14,6 +14,7 @@ import { InteractionDesignComponent } from "./feature/interaction-design/interac
 import { TopmenuComponent } from "./core/topmenu/topmenu.component";
 import { GsapExamplesComponent } from "./core/gsap-examples/gsap-examples.component";
 import { SandBoxComponent } from './core/sand-box/sand-box.component';
+import { InnitalComponent } from './core/innital/innital.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SandBoxComponent } from './core/sand-box/sand-box.component';
     TopmenuComponent,
     GsapExamplesComponent,
     SandBoxComponent,
+    InnitalComponent,
   ],
   imports: [
     BrowserModule,

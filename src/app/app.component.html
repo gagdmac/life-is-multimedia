@@ -1,9 +1,9 @@
 <header class="fixed-top no-print">
   <!-- <a (click)="scroll(content)" class="skip-to-content pl-2 pr-2">Skip to main content</a> -->
-  <nav>
+  <!-- <nav class="text-center">
     <app-side-menu></app-side-menu>
     <app-topmenu></app-topmenu>
-  </nav>
+  </nav> -->
   <!-- <div class="c-nav-menu u-none-p u-zindex menu"> -->
   <!-- <button pButton type="button" class="p-button-link"> -->
   <!-- (click)="toggleSideBar()" -->
@@ -22,6 +22,8 @@
     </section>
   </aside>
   <main #content id="content" class="">
+    <app-innital></app-innital>
+
     <router-outlet>
       <div class="no-print">
         <!-- [ngClass]="isExpanding ? 'overlay': ''" -->
