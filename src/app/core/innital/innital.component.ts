@@ -15,7 +15,6 @@ export class InnitalComponent implements OnInit {
 
   ngAfterViewInit() {
     const letters = this.elementRef.nativeElement.querySelectorAll(".letter");
-    const boxA = this.elementRef.nativeElement.querySelectorAll(".boxA");
 
     gsap.to(letters, {
       opacity: 1,
