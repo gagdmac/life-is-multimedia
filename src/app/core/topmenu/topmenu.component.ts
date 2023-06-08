@@ -7,7 +7,7 @@ import { gsap } from "gsap";
   styleUrls: ["./topmenu.component.scss"],
 })
 export class TopmenuComponent implements OnInit {
-  staggerOption: string = "end"; // Default stagger option
+  staggerOption: string = "random"; // Default stagger option
   multimediaTimeline!: gsap.core.Timeline;
   boxDTimeline!: gsap.core.Timeline;
   // timeline!: gsap.core.Timeline;

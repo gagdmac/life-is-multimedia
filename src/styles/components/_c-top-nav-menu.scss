@@ -1,23 +1,18 @@
-// .top-nav .p-button {
-//   background: transparent !important;
-//   border: none !important;
-//   color: $primary-background-color !important;
-// }
-
-// .top-nav .p-button:hover {
-//   background: $primary-background-color !important;
-//   border: none !important;
-//   color: $c-white !important;
-// }
-
 .top-menu {
   background: transparent;
   display: flex;
   justify-content: center;
+  align-items: center;
   p {
     font-size: rem-calc(120);
     font-family: "Playfair Display", serif;
   }
+}
+
+.color-menu {
+  background: transparent;
+  display: flex;
+  justify-content: center;
 }
 
 .multimedia {
@@ -28,7 +23,5 @@
   width: 50px;
   height: 20px;
   background: rgb(185, 44, 157);
-  margin: 2px;
-  display: flex;
-  justify-content: center;
+  margin: rem-calc(2);
 }
