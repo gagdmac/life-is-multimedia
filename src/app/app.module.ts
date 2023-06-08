@@ -1,12 +1,14 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { SideMenuComponent } from "./core/side-menu/side-menu.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { SandBoxComponent } from "./core/sand-box/sand-box.component";
 import { InnitalComponent } from "./core/innital/innital.component";
 import { TopmenuComponent } from "./core/topmenu/topmenu.component";
+import { MouseFollowerComponent } from "./core/mouse-follower/mouse-follower.component";
 
 @NgModule({
   declarations: [
@@ -15,8 +17,9 @@ import { TopmenuComponent } from "./core/topmenu/topmenu.component";
     SandBoxComponent,
     InnitalComponent,
     TopmenuComponent,
+    MouseFollowerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
