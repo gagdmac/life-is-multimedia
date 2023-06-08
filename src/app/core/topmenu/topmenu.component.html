@@ -1,7 +1,7 @@
 <div class="row">
   <div class="container">
     <div class="row">
-      <div class="col-9 top-menu cb1">
+      <div class="col-10 top-menu cb1">
         <p class="me-4">Life is</p>
         <p class="multimedia">M</p>
         <p class="multimedia">u</p>
@@ -14,15 +14,50 @@
         <p class="multimedia">i</p>
         <p class="multimedia">a</p>
       </div>
-      <div class="col-3 top-menu cb1">
+      <div class="col-2 top-menu cb1">
         <ul>
-          <li><button (click)="setStagger('center')">Center</button></li>
-          <li><button (click)="setStagger('end')">End</button></li>
-          <li><button (click)="setStagger('edges')">Edges</button></li>
-          <li><button (click)="setStagger('random')">Random</button></li>
-          <li><button (click)="setStagger('x')">Axis X</button></li>
-          <li><button (click)="setStagger('y')">Axis Y</button></li>
-          <li><button (click)="setStagger('none')">None</button></li>
+          <button
+            type="button"
+            (click)="setStagger('center')"
+            class="btn m-1 btn-primary"
+          >
+            Center
+          </button>
+          <button
+            type="button"
+            (click)="setStagger('end')"
+            class="btn m-1 btn-secondary"
+          >
+            End
+          </button>
+          <button
+            type="button"
+            (click)="setStagger('edges')"
+            class="btn m-1 btn-success"
+          >
+            Edges
+          </button>
+          <button
+            type="button"
+            (click)="setStagger('random')"
+            class="btn m-1 btn-danger"
+          >
+            Random
+          </button>
+          <button
+            type="button"
+            (click)="setStagger('x')"
+            class="btn m-1 btn-warning"
+          >
+            Axis X
+          </button>
+          <button
+            type="button"
+            (click)="setStagger('y')"
+            class="btn m-1 btn-info"
+          >
+            Axis Y
+          </button>
         </ul>
       </div>
     </div>

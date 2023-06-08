@@ -101,8 +101,6 @@ export class TopmenuComponent implements OnInit {
         return [1, 0];
       case "y":
         return [0, 1];
-      case "none":
-        return undefined;
       default:
         return undefined;
     }
