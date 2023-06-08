@@ -9,3 +9,16 @@
 //   border: none !important;
 //   color: $c-white !important;
 // }
+
+.top-menu {
+  background: transparent;
+  display: flex;
+  p {
+    font-size: rem-calc(120);
+    font-family: "Playfair Display", serif;
+  }
+}
+
+.multimedia {
+  margin-top: -24px;
+}

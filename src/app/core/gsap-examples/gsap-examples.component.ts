@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, AfterViewInit } from "@angular/core";
+import { Component, OnInit, ElementRef } from "@angular/core";
 import { gsap } from "gsap";
 
 let tl = gsap.timeline({

@@ -1,12 +1,10 @@
-<header class="fixed-top no-print">
+<header class="">
   <!-- <a (click)="scroll(content)" class="skip-to-content pl-2 pr-2">Skip to main content</a> -->
   <app-topmenu></app-topmenu>
 </header>
-<section class="c-wrapper">
-  <aside class="u-none-p no-print">
-    <section class="aside">
-      <app-side-menu></app-side-menu>
-    </section>
+<section class="c-wrapper cb1">
+  <aside class="">
+    <app-side-menu></app-side-menu>
   </aside>
   <main #content id="content" class="">
     <router-outlet> </router-outlet>

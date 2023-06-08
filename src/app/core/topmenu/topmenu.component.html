@@ -1,3 +1,30 @@
-<div class="row cb1">
-  <h1>Life is Multimedia</h1>
+<div class="row">
+  <div class="container">
+    <div class="row">
+      <div class="col-9 top-menu cb1">
+        <p class="me-4">Life is</p>
+        <p class="multimedia">M</p>
+        <p class="multimedia">u</p>
+        <p class="multimedia">l</p>
+        <p class="multimedia">t</p>
+        <p class="multimedia">i</p>
+        <p class="multimedia">m</p>
+        <p class="multimedia">e</p>
+        <p class="multimedia">d</p>
+        <p class="multimedia">i</p>
+        <p class="multimedia">a</p>
+      </div>
+      <div class="col-3 top-menu cb1">
+        <ul>
+          <li><button (click)="setStagger('center')">Center</button></li>
+          <li><button (click)="setStagger('end')">End</button></li>
+          <li><button (click)="setStagger('edges')">Edges</button></li>
+          <li><button (click)="setStagger('random')">Random</button></li>
+          <li><button (click)="setStagger('x')">Axis X</button></li>
+          <li><button (click)="setStagger('y')">Axis Y</button></li>
+          <li><button (click)="setStagger('none')">None</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
