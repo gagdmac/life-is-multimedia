@@ -7,25 +7,32 @@ import { gsap } from "gsap";
   styleUrls: ["./topmenu.component.scss"],
 })
 export class TopmenuComponent implements OnInit {
-  staggerOption: string = "random"; // Default stagger option
-  timeline!: gsap.core.Timeline;
+  staggerOption: string = "end"; // Default stagger option
+  multimediaTimeline!: gsap.core.Timeline;
+  boxDTimeline!: gsap.core.Timeline;
+  // timeline!: gsap.core.Timeline;
 
   constructor(private elementRef: ElementRef) {}
 
   ngOnInit() {
     gsap.set(".multimedia", { opacity: 0 });
+    gsap.set(".boxD", { opacity: 0, x: -100 });
   }
 
   ngAfterViewInit() {
-    this.timeline = gsap.timeline({ defaults: { ease: "power3.inOut" } });
-    const multimedia =
-      this.elementRef.nativeElement.querySelectorAll(".multimedia");
-    this.timeline.fromTo(
+    const multimedia = Array.from(
+      this.elementRef.nativeElement.querySelectorAll(".multimedia")
+    );
+    const boxD = Array.from(
+      this.elementRef.nativeElement.querySelectorAll(".boxD")
+    );
+
+    this.multimediaTimeline = gsap.timeline({
+      defaults: { ease: "power3.inOut" },
+    });
+    this.multimediaTimeline.fromTo(
       multimedia,
-      {
-        opacity: 0,
-        y: -24,
-      },
+      { opacity: 0, y: -24 },
       {
         opacity: 1,
         y: 24,
@@ -35,28 +42,50 @@ export class TopmenuComponent implements OnInit {
         ease: "elastic.out(1, 0.3)",
         delay: 1,
         repeatDelay: 3,
-        stagger: {
-          each: 0.2,
-          from: this.mapStaggerOption(this.staggerOption),
-        },
+        stagger: this.mapStaggerOption(this.staggerOption),
+      }
+    );
+
+    this.boxDTimeline = gsap.timeline({ defaults: { ease: "power3.inOut" } });
+    this.boxDTimeline.fromTo(
+      boxD,
+      { opacity: 0, y: -24 },
+      {
+        opacity: 1,
+        y: 24,
+        duration: 1,
+        repeat: -1,
+        yoyo: true,
+        ease: "elastic.out(1, 0.3)",
+        delay: 1,
+        repeatDelay: 3,
+        stagger: this.mapStaggerOption(this.staggerOption),
       }
     );
   }
 
   setStagger(option: string) {
     this.staggerOption = option;
-    const multimedia =
-      this.elementRef.nativeElement.querySelectorAll(".multimedia");
-    this.timeline.pause(); // Pause the timeline
-    this.timeline.kill(); // Kill the timeline and reset it
 
-    this.timeline = gsap.timeline({ defaults: { ease: "power3.inOut" } });
-    this.timeline.fromTo(
+    const multimedia = Array.from(
+      this.elementRef.nativeElement.querySelectorAll(".multimedia")
+    );
+    const boxD = Array.from(
+      this.elementRef.nativeElement.querySelectorAll(".boxD")
+    );
+
+    gsap.killTweensOf(multimedia); // Kill the previous tweens
+    gsap.killTweensOf(boxD); // Kill the previous tweens
+
+    gsap.set(multimedia, { opacity: 0, y: -24 });
+    gsap.set(boxD, { opacity: 0, y: -24 });
+
+    this.multimediaTimeline = gsap.timeline({
+      defaults: { ease: "power3.inOut" },
+    });
+    this.multimediaTimeline.fromTo(
       multimedia,
-      {
-        opacity: 0,
-        y: -24,
-      },
+      { opacity: 0, y: -24 },
       {
         opacity: 1,
         y: 24,
@@ -66,41 +95,44 @@ export class TopmenuComponent implements OnInit {
         ease: "elastic.out(1, 0.3)",
         delay: 1,
         repeatDelay: 3,
-        stagger: {
-          each: 0.2,
-          from: this.mapStaggerOption(option),
-        },
+        stagger: this.mapStaggerOption(option),
       }
     );
-    this.timeline.play(); // Play the timeline
+
+    this.boxDTimeline = gsap.timeline({ defaults: { ease: "power3.inOut" } });
+    this.boxDTimeline.fromTo(
+      boxD,
+      { opacity: 0, y: -24 },
+      {
+        opacity: 1,
+        y: 24,
+        duration: 1,
+        repeat: -1,
+        yoyo: true,
+        ease: "elastic.out(1, 0.3)",
+        delay: 1,
+        repeatDelay: 3,
+        stagger: this.mapStaggerOption(option),
+      }
+    );
   }
 
-  mapStaggerOption(
-    option: string
-  ):
-    | number
-    | "start"
-    | "center"
-    | "end"
-    | "edges"
-    | "random"
-    | [number, number]
-    | undefined {
+  mapStaggerOption(option: string): any {
     switch (option) {
       case "start":
-        return "start";
+        return { each: 0.1, from: "start" };
       case "center":
-        return "center";
+        return { each: 0.1, from: "center" };
       case "end":
-        return "end";
+        return { each: 0.1, from: "end" };
       case "edges":
-        return "edges";
+        return { each: 0.1, from: "edges(0.5)" };
       case "random":
-        return "random";
+        return { each: 0.1, from: "random" };
       case "x":
-        return [1, 0];
+        return { each: 0.1, from: "x" };
       case "y":
-        return [0, 1];
+        return { each: 0.1, from: "y" };
       default:
         return undefined;
     }

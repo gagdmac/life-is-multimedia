@@ -102,7 +102,7 @@ export class GsapExamplesComponent implements OnInit {
       yoyo: true,
       stagger: {
         each: 0.5,
-        from: "center",
+        from: "random",
       },
     });
 
