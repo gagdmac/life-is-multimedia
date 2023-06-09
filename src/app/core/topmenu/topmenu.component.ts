@@ -124,15 +124,15 @@ export class TopmenuComponent implements OnInit {
       case "center":
         return { each: 0.1, from: "center" };
       case "end":
-        return { each: 0.1, from: "end" };
+        return { each: 0.3, from: "end" };
       case "edges":
         return { each: 0.1, from: "edges(0.5)" };
       case "random":
-        return { each: 0.1, from: "random" };
+        return { each: 0.2, from: "random" };
       case "x":
         return { each: 0.1, from: "x" };
       case "y":
-        return { each: 0.1, from: "y" };
+        return { each: 0.3, from: "y" };
       default:
         return undefined;
     }
