@@ -21,15 +21,25 @@
   justify-content: center;
 }
 
-.multimedia {
-  margin-top: -24px;
+p.multimedia{
+  background-color: transparent !important;
 }
 
+.multimedia {
+  margin-top: rem-calc(-24);
+}
+
+
+
 .boxD {
-  width: 70px;
-  height: 20px;
+  width: rem-calc(48);
+  height: rem-calc(10);
+  border-radius: rem-calc(2);
   background: rgb(185, 44, 157);
   margin: rem-calc(2);
+  &_t{
+    background:transparent;
+  }
 }
 
 .animations {
