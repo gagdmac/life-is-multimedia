@@ -16,7 +16,7 @@ export class TopmenuComponent implements OnInit {
 
   ngOnInit() {
     gsap.set(".multimedia", { opacity: 0 });
-    gsap.set(".boxD", { opacity: 0, x: -100 });
+    gsap.set(".boxD", { opacity: 0 });
   }
 
   ngAfterViewInit() {
