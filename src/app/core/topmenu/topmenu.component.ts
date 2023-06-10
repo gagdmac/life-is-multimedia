@@ -41,7 +41,7 @@ ngAfterViewInit() {
   // gsap.to("#mano-raton", { rotate: 10,x:2, y:-4, duration: .5, repeat:-1, yoyo:true });
   
   const svgElement = gsap.utils.selector("#click-raton");
-  gsap.to("#click-raton", { opacity:0 });
+  gsap.set("#click-raton", { opacity:0 });
 
   const multimedia: HTMLElement[] = Array.from(
     this.elementRef.nativeElement.querySelectorAll(".multimedia")
@@ -78,6 +78,8 @@ setStagger(option: string) {
  const svgElement = document.querySelector("#mano-raton") as HTMLElement;
     const clickElement = document.querySelector("#click-raton") as HTMLElement;
 
+    
+
     gsap.to(svgElement, {
       rotate: "2%",
       duration: 0.1,
@@ -92,10 +94,10 @@ setStagger(option: string) {
 
         // Set opacity 1 to the click element
         gsap.set(clickElement, {
-          opacity: 1
+          opacity: 1,
         });
 
-        // Fade out the click element after 1 second
+        // Fade out the click element after .1 second
         gsap.to(clickElement, {
           opacity: 0,
           duration: 0.2,
