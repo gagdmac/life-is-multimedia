@@ -4,10 +4,12 @@
   justify-content: center;
   align-items: center;
   p {
-    font-size: rem-calc(120);
+    font-size: 6.3vw;
     font-family: "Playfair Display", serif;
   }
 }
+
+
 
 .color-menu {
   background: transparent;
@@ -21,20 +23,25 @@
   justify-content: center;
 }
 
-p.multimedia{
-  background-color: transparent !important;
+.boxes{
+  width: 48vw;
+  display: flex;
 }
+
+
 
 .multimedia {
   margin-top: rem-calc(-24);
 }
 
-
+p.multimedia {
+  background-color: transparent !important;
+}
 
 .boxD {
-  width: rem-calc(48);
+  width: rem-calc(55);
   height: rem-calc(10);
-  border-radius: rem-calc(2);
+  border-radius: rem-calc(3);
   background: rgb(185, 44, 157);
   margin: rem-calc(2);
   &_t{
@@ -45,6 +52,9 @@ p.multimedia{
 .animations {
   p {
     font-family: "Sacramento", cursive;
-    font-size: rem-calc(32);
   }
 }
+
+
+//MEDIA Querys
+

@@ -19,7 +19,9 @@ export class TopmenuComponent implements OnInit {
     gsap.set(".multimedia", { opacity: 0 });
     gsap.set(".boxD", { opacity: 0 });
     this.generateColorPalette(); // Generate color palette
+
   }
+  
 
   // Method to add hover behavior to the boxD elements
   addHoverEffectToBoxD(boxD: HTMLElement[]) {
@@ -34,6 +36,10 @@ export class TopmenuComponent implements OnInit {
   }
 
 ngAfterViewInit() {
+
+  const svgElement = gsap.utils.selector("#mano-raton");
+  gsap.to("#mano-raton", { x: 100, y: 200, duration: 1 });
+
   const multimedia: HTMLElement[] = Array.from(
     this.elementRef.nativeElement.querySelectorAll(".multimedia")
   );
