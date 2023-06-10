@@ -37,8 +37,11 @@ export class TopmenuComponent implements OnInit {
 
 ngAfterViewInit() {
 
-  const svgElement = gsap.utils.selector("#mano-raton");
-  gsap.to("#mano-raton", { x: 100, y: 200, duration: 1 });
+  // const svgElement = gsap.utils.selector("#mano-raton");
+  // gsap.to("#mano-raton", { rotate: 10,x:2, y:-4, duration: .5, repeat:-1, yoyo:true });
+  
+  const svgElement = gsap.utils.selector("#click-raton");
+  gsap.to("#click-raton", { opacity:0 });
 
   const multimedia: HTMLElement[] = Array.from(
     this.elementRef.nativeElement.querySelectorAll(".multimedia")
@@ -71,6 +74,36 @@ setStagger(option: string) {
 
   // Add hover behavior to the boxD elements
   this.addHoverEffectToBoxD(boxD);
+
+ const svgElement = document.querySelector("#mano-raton") as HTMLElement;
+    const clickElement = document.querySelector("#click-raton") as HTMLElement;
+
+    gsap.to(svgElement, {
+      rotate: "2%",
+      duration: 0.1,
+      ease: "power1.inOut",
+      onComplete: () => {
+        // Rotate back to the original position
+        gsap.to(svgElement, {
+          rotate: "0",
+          duration: 0.1,
+          ease: "power1.inOut"
+        });
+
+        // Set opacity 1 to the click element
+        gsap.set(clickElement, {
+          opacity: 1
+        });
+
+        // Fade out the click element after 1 second
+        gsap.to(clickElement, {
+          opacity: 0,
+          duration: 0.2,
+          delay: .1,
+          ease: "power1.inOut"
+        });
+      }
+    });
 }
 
 private initializeElements(selector: string): HTMLElement[] {
