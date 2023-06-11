@@ -4,12 +4,47 @@ import gsap from "gsap";
 @Component({
   selector: "app-mouse-follower",
   templateUrl: "./mouse-follower.component.html",
-  styleUrls: ["./mouse-follower.component.css"],
 })
 export class MouseFollowerComponent implements OnInit {
   ngOnInit() {
     this.setupAnimation();
   }
+
+  ngAfterViewInit() {
+    gsap.to(".ball", {
+      rotate: 20,
+      y: 9,
+      x: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "power3.inOut",
+    });
+
+    gsap.to(".ball", {
+      x: "+=5",
+      y: "+=4",
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+
+    gsap.to(".ball", {
+      x: "+=20",
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+      duration: 1.5,
+    });
+
+    gsap.to(".ball", {
+      y: "+=15",
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+      duration: 1.2,
+    });
+  }
+
   private setupAnimation() {
     gsap.set(".ball", { xPercent: -50, yPercent: -50 });
 
