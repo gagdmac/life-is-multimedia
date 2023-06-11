@@ -1,16 +1,16 @@
-//////////////////////////////////
-////////////WRAPPER//////////////
-////////////////////////////////
+// //////////////////////////////////
+// ////////////WRAPPER//////////////
+// ////////////////////////////////
 
 .c-wrapper {
   display: flex;
   width: 100%;
-  margin-top: rem-calc(92);
+  justify-content: space-between;
 }
 
 //media
-@include respond-below(md) {
-  .c-wrapper {
-    margin-top: rem-calc(108);
-  }
-}
+// @include respond-below(md) {
+//   .c-wrapper {
+//     margin-top: rem-calc(108);
+//   }
+// }

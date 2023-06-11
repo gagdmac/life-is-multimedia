@@ -1,12 +1,94 @@
-.top-nav .p-button {
-  background: transparent !important;
-  border: none !important;
-  color: $primary-background-color !important;
+.top-menu {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 11.3vw;
+    font-family: "Playfair Display", serif;
+  }
+}
+
+.color-menu {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.boxD-menu {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.boxes{
+  width: 84vw;
+  display: flex;
 }
 
 
-.top-nav .p-button:hover {
-  background: $primary-background-color !important;
-  border: none !important;
-  color: $c-white !important;
+.multimedia {
+  margin-top: rem-calc(-24);
+}
+
+p.multimedia {
+  background-color: transparent !important;
+}
+
+.boxD {
+  width: rem-calc(55);
+  height: rem-calc(10);
+  border-radius: rem-calc(3);
+  background: rgb(185, 44, 157);
+  margin: rem-calc(2);
+  &_t{
+    background:transparent;
+  }
+}
+
+.animations {
+  p {
+    font-size: 8vw;
+    font-family: "Sacramento", cursive;
+  }
+}
+
+//MEDIA Querys
+
+@media (width >=768px) {
+.top-menu {
+    p {
+      font-size: 9.3vw;
+      font-family: "Playfair Display", serif;
+    }
+  }
+  
+  .boxes {
+    width: 70vw;
+  }
+
+.animations {
+  p {
+    font-size: 5vw;
+  }
+}
+}
+
+@media (width >=990px) {
+  .top-menu {
+    p {
+      font-size: 3.3vw;
+      font-family: "Playfair Display", serif;
+    }
+  }
+
+  .boxes {
+    width: 25vw;
+  }
+
+  .animations {
+    p {
+      font-size: 2vw;
+    }
+  }
 }
