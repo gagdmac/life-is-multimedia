@@ -4,7 +4,6 @@ import { gsap } from "gsap";
 @Component({
   selector: "app-topmenu",
   templateUrl: "./topmenu.component.html",
-  styleUrls: ["./topmenu.component.scss"],
 })
 export class TopmenuComponent implements OnInit {
   staggerOption: string = "random"; // Default stagger option
