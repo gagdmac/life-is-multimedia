@@ -9,6 +9,7 @@ import { SandBoxComponent } from "./core/sand-box/sand-box.component";
 import { InnitalComponent } from "./core/innital/innital.component";
 import { TopmenuComponent } from "./core/topmenu/topmenu.component";
 import { MouseFollowerComponent } from "./core/mouse-follower/mouse-follower.component";
+import { ThemeSwitcherComponent } from './core/theme-switcher/theme-switcher.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MouseFollowerComponent } from "./core/mouse-follower/mouse-follower.com
     InnitalComponent,
     TopmenuComponent,
     MouseFollowerComponent,
+    ThemeSwitcherComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
