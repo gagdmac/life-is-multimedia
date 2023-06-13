@@ -59,7 +59,7 @@ export class TopmenuComponent implements OnInit {
           opacity: 1,
           y: "+=15",
         });
-      }, 3000);
+      }, 2000);
     });
 
     avatarElement.addEventListener("mouseleave", () => {
@@ -72,8 +72,29 @@ export class TopmenuComponent implements OnInit {
           // Move back to the original position
           gsap.to(gotaElement, {
             y: -10,
+            delay: 0,
           });
         },
+      });
+    });
+
+    const bocaElement = document.querySelector("#boca") as SVGPathElement;
+    const initialY = 0; // Initial position of the path's y coordinate
+    const offsetY = 10; // Offset for the downward movement
+
+    gotaElement.addEventListener("mouseenter", () => {
+      gsap.to(bocaElement, {
+        y: initialY + offsetY, // Move the path downward by the offset
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    });
+
+    gotaElement.addEventListener("mouseleave", () => {
+      gsap.to(bocaElement, {
+        y: initialY, // Move the path back to the initial position
+        duration: 0.3,
+        ease: "power2.out",
       });
     });
   }
