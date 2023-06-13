@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   p {
-    font-size: 11.3vw;
+    font-size: 9.8vw;
     font-family: "Playfair Display", serif;
   }
 }
@@ -21,11 +21,10 @@
   justify-content: center;
 }
 
-.boxes{
+.boxes {
   width: 84vw;
   display: flex;
 }
-
 
 .multimedia {
   margin-top: rem-calc(-24);
@@ -41,8 +40,8 @@ p.multimedia {
   border-radius: rem-calc(3);
   background: rgb(185, 44, 157);
   margin: rem-calc(2);
-  &_t{
-    background:transparent;
+  &_t {
+    background: transparent;
   }
 }
 
@@ -53,31 +52,34 @@ p.multimedia {
   }
 }
 
+.botones .btn {
+  margin-right: 1%;
+}
 //MEDIA Querys
 
 @media (width >=768px) {
-.top-menu {
+  .top-menu {
     p {
-      font-size: 9.3vw;
+      font-size: 8.3vw;
       font-family: "Playfair Display", serif;
     }
   }
-  
+
   .boxes {
     width: 70vw;
   }
 
-.animations {
-  p {
-    font-size: 5vw;
+  .animations {
+    p {
+      font-size: 5vw;
+    }
   }
-}
 }
 
 @media (width >=990px) {
   .top-menu {
     p {
-      font-size: 3.3vw;
+      font-size: 3vw;
       font-family: "Playfair Display", serif;
     }
   }
