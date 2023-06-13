@@ -10,74 +10,96 @@ export class TopmenuComponent implements OnInit {
   multimediaTimeline!: gsap.core.Timeline;
   boxDTimeline!: gsap.core.Timeline;
   colorPalette: string[] = []; // Color palette property
-
+  isHovering: boolean = false;
+  hoverTimeout: any;
 
   constructor(private elementRef: ElementRef) {}
 
   ngOnInit() {
     gsap.set(".multimedia", { opacity: 0 });
     gsap.set(".boxD", { opacity: 0 });
+    gsap.set("#click-raton", { opacity: 0 });
+    gsap.set("#gota", { opacity: 0, y: -10 });
     this.generateColorPalette(); // Generate color palette
-
   }
-  
 
   // Method to add hover behavior to the boxD elements
   addHoverEffectToBoxD(boxD: HTMLElement[]) {
     boxD.forEach((element: HTMLElement) => {
       element.addEventListener("mouseenter", () => {
-        gsap.to(element, {  duration: 0.2, rotate: 180 });
+        gsap.to(element, { duration: 0.2, rotate: 180 });
       });
       element.addEventListener("mouseleave", () => {
-        gsap.to(element, {  duration: 0.2, rotate: -180 });
+        gsap.to(element, { duration: 0.2, rotate: -180 });
       });
     });
   }
 
-ngAfterViewInit() {
+  ngAfterViewInit() {
+    const multimedia: HTMLElement[] = Array.from(
+      this.elementRef.nativeElement.querySelectorAll(".multimedia")
+    );
+    const boxD: HTMLElement[] = this.initializeElements(".boxD");
 
-  // const svgElement = gsap.utils.selector("#mano-raton");
-  // gsap.to("#mano-raton", { rotate: 10,x:2, y:-4, duration: .5, repeat:-1, yoyo:true });
-  
-  const svgElement = gsap.utils.selector("#click-raton");
-  gsap.set("#click-raton", { opacity:0 });
+    this.multimediaTimeline = this.createTimeline(
+      multimedia,
+      this.staggerOption
+    );
+    this.boxDTimeline = this.createTimeline(boxD, this.staggerOption);
 
-  const multimedia: HTMLElement[] = Array.from(
-    this.elementRef.nativeElement.querySelectorAll(".multimedia")
-  );
-  const boxD: HTMLElement[] = this.initializeElements(".boxD");
+    // Add hover behavior to the boxD elements
+    this.addHoverEffectToBoxD(boxD);
 
-  this.multimediaTimeline = this.createTimeline(multimedia, this.staggerOption);
-  this.boxDTimeline = this.createTimeline(boxD, this.staggerOption);
+    const avatarElement = document.querySelector("#avatar") as HTMLElement;
+    const gotaElement = document.querySelector("#gota") as HTMLElement;
 
-  // Add hover behavior to the boxD elements
-  this.addHoverEffectToBoxD(boxD);
-}
+    avatarElement.addEventListener("mouseenter", () => {
+      this.hoverTimeout = setTimeout(() => {
+        gsap.to(gotaElement, {
+          opacity: 1,
+          y: "+=15",
+        });
+      }, 3000);
+    });
 
-setStagger(option: string) {
-  this.staggerOption = option;
+    avatarElement.addEventListener("mouseleave", () => {
+      clearTimeout(this.hoverTimeout);
+      gsap.to(gotaElement, {
+        opacity: 0,
+        delay: 1,
+        y: 15,
+        onComplete: () => {
+          // Move back to the original position
+          gsap.to(gotaElement, {
+            y: -10,
+          });
+        },
+      });
+    });
+  }
 
-  const multimedia: HTMLElement[] = Array.from(
-    this.elementRef.nativeElement.querySelectorAll(".multimedia")
-  );
-  const boxD: HTMLElement[] = this.initializeElements(".boxD");
+  setStagger(option: string) {
+    this.staggerOption = option;
 
-  gsap.killTweensOf(multimedia); // Kill the previous tweens
-  gsap.killTweensOf(boxD); // Kill the previous tweens
+    const multimedia: HTMLElement[] = Array.from(
+      this.elementRef.nativeElement.querySelectorAll(".multimedia")
+    );
+    const boxD: HTMLElement[] = this.initializeElements(".boxD");
 
-  gsap.set(multimedia, { opacity: 0, y: -24 });
-  gsap.set(boxD, { opacity: 0, y: -24 });
+    gsap.killTweensOf(multimedia); // Kill the previous tweens
+    gsap.killTweensOf(boxD); // Kill the previous tweens
 
-  this.multimediaTimeline = this.createTimeline(multimedia, option);
-  this.boxDTimeline = this.createTimeline(boxD, option);
+    gsap.set(multimedia, { opacity: 0, y: -24 });
+    gsap.set(boxD, { opacity: 0, y: -24 });
 
-  // Add hover behavior to the boxD elements
-  this.addHoverEffectToBoxD(boxD);
+    this.multimediaTimeline = this.createTimeline(multimedia, option);
+    this.boxDTimeline = this.createTimeline(boxD, option);
 
- const svgElement = document.querySelector("#mano-raton") as HTMLElement;
+    // Add hover behavior to the boxD elements
+    this.addHoverEffectToBoxD(boxD);
+
+    const svgElement = document.querySelector("#mano-raton") as HTMLElement;
     const clickElement = document.querySelector("#click-raton") as HTMLElement;
-
-    
 
     gsap.to(svgElement, {
       rotate: "2%",
@@ -88,7 +110,7 @@ setStagger(option: string) {
         gsap.to(svgElement, {
           rotate: "0",
           duration: 0.1,
-          ease: "power1.inOut"
+          ease: "power1.inOut",
         });
 
         // Set opacity 1 to the click element
@@ -100,44 +122,44 @@ setStagger(option: string) {
         gsap.to(clickElement, {
           opacity: 0,
           duration: 0.2,
-          delay: .1,
-          ease: "power1.inOut"
+          delay: 0.1,
+          ease: "power1.inOut",
         });
-      }
+      },
     });
-}
+  }
 
-private initializeElements(selector: string): HTMLElement[] {
-  return Array.from(
-    this.elementRef.nativeElement.querySelectorAll(selector)
-  );
-}
+  private initializeElements(selector: string): HTMLElement[] {
+    return Array.from(this.elementRef.nativeElement.querySelectorAll(selector));
+  }
 
-private createTimeline(elements: HTMLElement[], staggerOption: string): gsap.core.Timeline {
-  return gsap.timeline({ defaults: { ease: "power3.inOut" } }).fromTo(
-    elements,
-    { opacity: 0, y: -24, scale: 0 },
-    {
-      scale: 1,
-      opacity: 1,
-      y: 24,
-      duration: 1,
-      repeat: -1,
-      yoyo: true,
-      ease: "elastic.out(1, 0.3)",
-      delay: 1,
-      repeatDelay: 3,
-      stagger: this.mapStaggerOption(staggerOption),
-      onUpdate: () => {
-        this.updateBoxDColors(elements); // Update boxD colors during animation
-      },
-      to: {
-        backgroundColor: this.colorPalette[0], // Set a single color from the colorPalette array
-      },
-    }
-  );
-}
-
+  private createTimeline(
+    elements: HTMLElement[],
+    staggerOption: string
+  ): gsap.core.Timeline {
+    return gsap.timeline({ defaults: { ease: "power3.inOut" } }).fromTo(
+      elements,
+      { opacity: 0, y: -24, scale: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        y: 24,
+        duration: 1,
+        repeat: -1,
+        yoyo: true,
+        ease: "elastic.out(1, 0.3)",
+        delay: 1,
+        repeatDelay: 3,
+        stagger: this.mapStaggerOption(staggerOption),
+        onUpdate: () => {
+          this.updateBoxDColors(elements); // Update boxD colors during animation
+        },
+        to: {
+          backgroundColor: this.colorPalette[0], // Set a single color from the colorPalette array
+        },
+      }
+    );
+  }
 
   // ngAfterViewInit() {
   //   const multimedia = Array.from(
@@ -192,7 +214,6 @@ private createTimeline(elements: HTMLElement[], staggerOption: string): gsap.cor
   //   // Add hover behavior to the boxD elements
   //   this.addHoverEffectToBoxD(boxD);
   // }
-
 
   // setStagger(option: string) {
   //   this.staggerOption = option;
@@ -278,7 +299,6 @@ private createTimeline(elements: HTMLElement[], staggerOption: string): gsap.cor
     }
   }
 
-
   generateColorPalette() {
     const hueStep = 360 / 20; // Hue step for 20 colors
     for (let i = 0; i < 20; i++) {
@@ -294,5 +314,4 @@ private createTimeline(elements: HTMLElement[], staggerOption: string): gsap.cor
       box.style.backgroundColor = color; // Set background color of boxD element
     });
   }
-
 }
