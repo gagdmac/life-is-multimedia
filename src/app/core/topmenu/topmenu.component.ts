@@ -43,11 +43,12 @@ export class TopmenuComponent implements OnInit {
       this.clickCount++; // Increment click count
 
       if (this.clickCount > 5) {
-        gsap.to(angryElement, { opacity: 1 }); // Set opacity to 1 after 5 clicks
+        gsap.to(angryElement, { opacity: 1, ease: "Elastic", scale: 3 }); // Set opacity to 1 after 5 clicks
 
         setTimeout(() => {
           gsap.to(angryElement, { opacity: 0 }); // Set opacity back to 0 after 3 seconds
         }, 3000);
+        this.clickCount = 0; // Restart click c
       }
     });
   }
@@ -177,6 +178,7 @@ export class TopmenuComponent implements OnInit {
       setTimeout(() => {
         gsap.to(angryElement, { opacity: 0 }); // Set opacity back to 0 after 3 seconds
       }, 3000);
+      this.clickCount = 0; // Restart click c
     }
   }
 
