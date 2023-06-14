@@ -12,6 +12,7 @@ export class TopmenuComponent implements OnInit {
   colorPalette: string[] = []; // Color palette property
   isHovering: boolean = false;
   hoverTimeout: any;
+  clickCount: number = 0; // Counter for mouse clicks
 
   constructor(private elementRef: ElementRef) {}
 
@@ -20,6 +21,7 @@ export class TopmenuComponent implements OnInit {
     gsap.set(".boxD", { opacity: 0 });
     gsap.set("#click-raton", { opacity: 0 });
     gsap.set("#gota", { opacity: 0, y: -10 });
+    gsap.set("#angry", { opacity: 0 });
     this.generateColorPalette(); // Generate color palette
   }
 
@@ -32,6 +34,21 @@ export class TopmenuComponent implements OnInit {
       element.addEventListener("mouseleave", () => {
         gsap.to(element, { duration: 0.2, rotate: -180 });
       });
+    });
+  }
+
+  initializeAngryElement() {
+    const angryElement = document.querySelector("#angry") as HTMLElement;
+    angryElement.addEventListener("click", () => {
+      this.clickCount++; // Increment click count
+
+      if (this.clickCount > 5) {
+        gsap.to(angryElement, { opacity: 1 }); // Set opacity to 1 after 5 clicks
+
+        setTimeout(() => {
+          gsap.to(angryElement, { opacity: 0 }); // Set opacity back to 0 after 3 seconds
+        }, 3000);
+      }
     });
   }
 
@@ -97,6 +114,8 @@ export class TopmenuComponent implements OnInit {
         ease: "power2.out",
       });
     });
+
+    this.initializeAngryElement();
   }
 
   setStagger(option: string) {
@@ -148,6 +167,17 @@ export class TopmenuComponent implements OnInit {
         });
       },
     });
+
+    this.clickCount++; // Increment click count
+
+    if (this.clickCount > 5) {
+      const angryElement = document.querySelector("#angry") as HTMLElement;
+      gsap.to(angryElement, { opacity: 1 }); // Set opacity to 1 after 5 clicks
+
+      setTimeout(() => {
+        gsap.to(angryElement, { opacity: 0 }); // Set opacity back to 0 after 3 seconds
+      }, 3000);
+    }
   }
 
   private initializeElements(selector: string): HTMLElement[] {
