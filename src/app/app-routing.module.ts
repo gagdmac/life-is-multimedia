@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router"; // CLI imports router
 import { GsapExamplesComponent } from "./core/gsap-examples/gsap-examples.component";
+import { SandBoxComponent } from "./core/sand-box/sand-box.component";
 import { AnimationComponentComponent } from "./feature/animation-component/animation-component.component";
 import { GraphicDesignComponentComponent } from "./feature/graphic-design-component/graphic-design-component.component";
 import { InteractionDesignComponent } from "./feature/interaction-design/interaction-design.component";
@@ -36,6 +37,10 @@ export const routes: Routes = [
   {
     path: "gsap-examples",
     component: GsapExamplesComponent,
+  },
+  {
+    path: "sand-box",
+    component: SandBoxComponent,
   },
 ];
 

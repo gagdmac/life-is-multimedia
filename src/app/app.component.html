@@ -1,15 +1,24 @@
-<!-- <app-innital></app-innital> -->
-<header class="">
+<header class="fixed-top no-print cb1">
   <!-- <a (click)="scroll(content)" class="skip-to-content pl-2 pr-2">Skip to main content</a> -->
-  <app-topmenu></app-topmenu>
+  <nav class="text-center cb2">
+    <app-topmenu></app-topmenu>
+  </nav>
 </header>
-<section class="c-wrapper cb1">
-  <aside class="aside cb1">
-    <app-side-menu></app-side-menu>
+<section class="c-wrapper">
+  <aside class="u-none-p no-print">
+    <section class="aside">
+      <app-side-menu></app-side-menu>
+    </section>
   </aside>
   <main #content id="content" class="">
-    <router-outlet></router-outlet>
-    <app-mouse-follower></app-mouse-follower>
+    <router-outlet>
+      <div class="no-print">
+        <!-- [ngClass]="isExpanding ? 'overlay': ''" -->
+      </div>
+      <app-mouse-follower></app-mouse-follower>
+    </router-outlet>
+    <br />
+    <br />
   </main>
   <!-- <app-footer class="c-footer u-none-p no-print"></app-footer> -->
 </section>
