@@ -11,6 +11,7 @@ import { TopmenuComponent } from "./core/topmenu/topmenu.component";
 import { GsapExamplesComponent } from "./core/gsap-examples/gsap-examples.component";
 import { MouseFollowerComponent } from "./core/mouse-follower/mouse-follower.component";
 import { ThemeSwitcherComponent } from './core/theme-switcher/theme-switcher.component';
+import { TitleComponent } from './core/title/title.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ThemeSwitcherComponent } from './core/theme-switcher/theme-switcher.com
     TopmenuComponent,
     MouseFollowerComponent,
     ThemeSwitcherComponent,
+    TitleComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

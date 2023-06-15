@@ -1,24 +1,46 @@
-<header class="fixed-top no-print cb1">
+<header class="no-print cb1">
   <!-- <a (click)="scroll(content)" class="skip-to-content pl-2 pr-2">Skip to main content</a> -->
-  <nav class="text-center cb2">
     <app-topmenu></app-topmenu>
-  </nav>
+    <app-title></app-title>
 </header>
-<section class="c-wrapper">
+
+
+  <div class="row align-items-md-stretch">
+    <div class="col-md-2">
+      <div class="h-100 p-5 text-white bg-dark rounded-3">
+      <section class="aside cb2">
+        <aside class="u-none-p no-print">
+          <app-side-menu></app-side-menu>
+        </aside>
+      </section>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="h-100 p-5 bg-light border rounded-3">
+        <section class="c-wrapper cb3">
+          <main #content id="content" class="">
+            <router-outlet>
+              <app-mouse-follower></app-mouse-follower>
+            </router-outlet>
+          </main>
+          <!-- <app-footer class="c-footer u-none-p no-print"></app-footer> -->
+        </section>
+      </div>
+    </div>
+  </div>
+
+
+<!-- <section class="aside cb2">
   <aside class="u-none-p no-print">
-    <section class="aside">
-      <app-side-menu></app-side-menu>
-    </section>
+    <app-side-menu></app-side-menu>
   </aside>
+</section>
+
+<section class="c-wrapper cb3">
   <main #content id="content" class="">
     <router-outlet>
-      <div class="no-print">
-        <!-- [ngClass]="isExpanding ? 'overlay': ''" -->
-      </div>
       <app-mouse-follower></app-mouse-follower>
     </router-outlet>
-    <br />
-    <br />
   </main>
-  <!-- <app-footer class="c-footer u-none-p no-print"></app-footer> -->
-</section>
+  <app-footer class="c-footer u-none-p no-print"></app-footer>
+</section> -->

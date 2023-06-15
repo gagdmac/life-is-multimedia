@@ -4,11 +4,9 @@
 ///////////////////////////////////////////////////
 
 aside {
-  width: rem-calc(200);
-  min-width: rem-calc(200);
+a{color: #ffffff;
+&:hover{
+  color: azure;
 }
-
-.vertical-menu {
-  display: flex;
-  flex-direction: column;
+}
 }
