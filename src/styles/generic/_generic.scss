@@ -202,44 +202,44 @@ body {
   overflow: auto !important;
 }
 
-// .animated-background {
-//   width: 100%;
-//   height: 100vh;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   z-index: -1;
-//   animation: backgroundAnimation 10s linear infinite;
-// }
+.animated-background {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: backgroundAnimation 10s linear infinite;
+}
 
-// @keyframes backgroundAnimation {
-//   0% {
-//     background: linear-gradient(45deg, #000000, #3a3a3a, #000000);
-//     background-size: 200% 200%;
-//     background-position: 0% 50%;
-//   }
-//   50% {
-//     background: linear-gradient(45deg, #000000, #3a3a3a, #000000);
-//     background-size: 200% 200%;
-//     background-position: 100% 50%;
-//   }
-//   100% {
-//     background: linear-gradient(45deg, #000000, #3a3a3a, #000000);
-//     background-size: 200% 200%;
-//     background-position: 0% 50%;
-//   }
-// }
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(45deg, #000000, #3a3a3a, #000000);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+  }
+  50% {
+    background: linear-gradient(45deg, #000000, #3a3a3a, #000000);
+    background-size: 200% 200%;
+    background-position: 100% 50%;
+  }
+  100% {
+    background: linear-gradient(45deg, #000000, #3a3a3a, #000000);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+  }
+}
 
-// .centrado {
-//   margin-left: 28%;
-// }
+.centrado {
+  margin-left: 28%;
+}
 
-// .letter {
-//   font-size: rem-calc(56);
-//   font-weight: 700;
-//   text-transform: uppercase;
-//   float: left;
-// }
+.letter {
+  font-size: rem-calc(56);
+  font-weight: 700;
+  text-transform: uppercase;
+  float: left;
+}
 
 // ////////////////////////////////////////////////////////////
 // ////////////////// GENERAL colors /////////////////////////
