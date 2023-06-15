@@ -43,7 +43,13 @@ export class TopmenuComponent implements OnInit {
       this.clickCount++; // Increment click count
 
       if (this.clickCount > 5) {
-        gsap.to(angryElement, { opacity: 1 }); // Set opacity to 1 after 5 clicks
+        gsap.to(angryElement, {
+          scale: 1,
+          opacity: 1,
+          duration: 2.5,
+          ease: "bounce.out",
+          y: -500,
+        }); // Set opacity to 1 after 5 clicks
 
         setTimeout(() => {
           gsap.to(angryElement, { opacity: 0 }); // Set opacity back to 0 after 3 seconds
@@ -52,6 +58,38 @@ export class TopmenuComponent implements OnInit {
       }
     });
   }
+
+  // initializeAngryElement() {
+  //   const angryElement = document.querySelector("#angry") as HTMLElement;
+  //   let clickCount = 0; // Initialize click count
+
+  //   angryElement.addEventListener("click", () => {
+  //     clickCount++; // Increment click count
+
+  //     if (clickCount === 5) {
+  //       const timeline = gsap.timeline();
+
+  //       timeline.to(angryElement, {
+  //         scale: 2,
+  //         opacity: 1,
+  //         duration: 2.5,
+  //         ease: "bounce.out",
+  //         y: -500,
+  //       });
+
+  //       timeline.to(angryElement, {
+  //         opacity: 0,
+  //         duration: 0,
+  //         delay: 3,
+  //         onComplete: () => {
+  //           gsap.set(angryElement, { opacity: 0 }); // Set opacity back to 0 after 3 seconds
+  //         },
+  //       });
+
+  //       clickCount = 0; // Reset click count
+  //     }
+  //   });
+  // }
 
   ngAfterViewInit() {
     const multimedia: HTMLElement[] = Array.from(
@@ -93,26 +131,6 @@ export class TopmenuComponent implements OnInit {
             delay: 0,
           });
         },
-      });
-    });
-
-    const bocaElement = document.querySelector("#boca") as SVGPathElement;
-    const initialY = 0; // Initial position of the path's y coordinate
-    const offsetY = 10; // Offset for the downward movement
-
-    gotaElement.addEventListener("mouseenter", () => {
-      gsap.to(bocaElement, {
-        y: initialY + offsetY, // Move the path downward by the offset
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    });
-
-    gotaElement.addEventListener("mouseleave", () => {
-      gsap.to(bocaElement, {
-        y: initialY, // Move the path back to the initial position
-        duration: 0.3,
-        ease: "power2.out",
       });
     });
 
