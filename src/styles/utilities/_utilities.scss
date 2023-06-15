@@ -1,7 +1,7 @@
 //backgorund
-.u-background-black {
-  background: $background-black;
-}
+// .u-background-black {
+//   background: $background-black;
+// }
 
 .u-background-transparent {
   background: transparent;
@@ -20,18 +20,18 @@
   font-weight: 700;
 }
 
-.u-label-color {
-  color: $c-primary;
-}
+// .u-label-color {
+//   color: $c-primary;
+// }
 
-//font color
-.u-color-primary {
-  color: $c-primary;
-}
+// //font color
+// .u-color-primary {
+//   color: $c-primary;
+// }
 
-.u-color-white {
-  color: $c-white;
-}
+// .u-color-white {
+//   color: $c-white;
+// }
 
 //font-sized
 .u-font-h1 {
@@ -171,7 +171,7 @@
 //mandatory
 .u-mandatory {
   font-weight: 700;
-  color: $c-red;
+  // color: $c-red;
   font-size: rem-calc(12);
   position: relative;
   top: rem-calc(-3);
@@ -219,6 +219,6 @@
   }
 
   .u-background-grey {
-    background: $background-grey;
+    // background: $background-grey;
   }
 }

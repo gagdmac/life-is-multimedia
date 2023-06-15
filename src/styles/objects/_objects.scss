@@ -1,46 +1,46 @@
-//TOPMENU
-.o-topmenu {
-  background-color: $primary-background-color;
-}
+// //TOPMENU
+// .o-topmenu {
+//   background-color: $primary-background-color;
+// }
 
-.small-logo {
-  display: none;
-}
+// .small-logo {
+//   display: none;
+// }
 
-.prtr-logo {
-  display: flow-root;
-  width: 100px;
-  height: 56px;
-}
+// .prtr-logo {
+//   display: flow-root;
+//   width: 100px;
+//   height: 56px;
+// }
 
-//.media
-@include respond-below(md) {
-  .small-logo {
-    display: inline-block;
-    margin-right: rem-calc(-40);
-  }
-}
+// //.media
+// @include respond-below(md) {
+//   .small-logo {
+//     display: inline-block;©
+//     margin-right: rem-calc(-40);
+//   }
+// }
 
-//TOPMENU SECONDARY
-.o-topmenu-secondary {
-  // background-image: url('../../assets/img/background/endlessconstellation.jpg');
-  box-shadow: rem-calc(0 0 6) $background-dark-grey-soft;
-}
+// //TOPMENU SECONDARY
+// .o-topmenu-secondary {
+//   // background-image: url('../../assets/img/background/endlessconstellation.jpg');
+//   box-shadow: rem-calc(0 0 6) $background-dark-grey-soft;
+// }
 
-//.media
-@include respond-below(md) {
-  .o-topmenu-secondary {
-    .big-logo {
-      display: none;
-    }
+// //.media
+// @include respond-below(md) {
+//   .o-topmenu-secondary {
+//     .big-logo {
+//       display: none;
+//     }
 
-    .prtr-logo {
-      display: none;
-    }
-  }
-}
+//     .prtr-logo {
+//       display: none;
+//     }
+//   }
+// }
 
-//SIDEBAR
-.o-side-menu {
-  background-color: $sidemenu-background;
-}
+// //SIDEBAR
+// .o-side-menu {
+//   background-color: $sidemenu-background;
+// }
