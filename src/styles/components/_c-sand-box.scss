@@ -1,96 +1,116 @@
-
-.color-menu {
-    background: transparent;
-    display: flex;
-    justify-content: center;
+.content {
+    position: relative;
+    width: 400px;
+    height: 400px;
 }
 
-.boxD-menu {
-    background: transparent;
-    display: flex;
-    justify-content: center;
+.neon-square {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }
 
-.boxes {
-    width: 84vw;
-    display: flex;
-}
 
-.multimedia {
-    margin-top: rem-calc(-24);
-}
 
-p.multimedia {
-    background-color: transparent !important;
-}
 
-.boxD {
-    width: rem-calc(55);
-    height: rem-calc(10);
-    border-radius: rem-calc(3);
-    background: rgb(185, 44, 157);
-    margin: rem-calc(2);
 
-    &_t {
-        background: transparent;
-    }
-}
 
-.animations {
-    p {
-        font-size: 8vw;
-        font-family: "Sacramento", cursive;
-    }
-}
 
-.botones .btn {
-    margin-right: 1%;
-}
 
-//MEDIA Querys
 
-@media (width >=768px) {
-    .top-menu {
-        p {
-            font-size: 8.3vw;
-            font-family: "Playfair Display", serif;
-        }
-    }
+// .color-menu {
+//     background: transparent;
+//     display: flex;
+//     justify-content: center;
+// }
 
-    .boxes {
-        width: 70vw;
-    }
+// .boxD-menu {
+//     background: transparent;
+//     display: flex;
+//     justify-content: center;
+// }
 
-    .animations {
-        p {
-            font-size: 5vw;
-        }
-    }
-}
+// .boxes {
+//     width: 84vw;
+//     display: flex;
+// }
 
-@media (width >=990px) {
-    .top-menu {
-        p {
-            font-size: 3vw;
-            font-family: "Playfair Display", serif;
-        }
-    }
+// .multimedia {
+//     margin-top: rem-calc(-24);
+// }
 
-    .boxes {
-        width: 25vw;
-    }
+// p.multimedia {
+//     background-color: transparent !important;
+// }
 
-    .animations {
-        p {
-            font-size: 2vw;
-        }
-    }
-}
+// .boxD {
+//     width: rem-calc(55);
+//     height: rem-calc(10);
+//     border-radius: rem-calc(3);
+//     background: rgb(185, 44, 157);
+//     margin: rem-calc(2);
 
-.boxB {
-    width: 50px;
-    height: 50px;
-    background: rgb(185, 44, 157);
-    float: left;
-    margin: 2px;
-}
+//     &_t {
+//         background: transparent;
+//     }
+// }
+
+// .animations {
+//     p {
+//         font-size: 8vw;
+//         font-family: "Sacramento", cursive;
+//     }
+// }
+
+// .botones .btn {
+//     margin-right: 1%;
+// }
+
+// //MEDIA Querys
+
+// @media (width >=768px) {
+//     .top-menu {
+//         p {
+//             font-size: 8.3vw;
+//             font-family: "Playfair Display", serif;
+//         }
+//     }
+
+//     .boxes {
+//         width: 70vw;
+//     }
+
+//     .animations {
+//         p {
+//             font-size: 5vw;
+//         }
+//     }
+// }
+
+// @media (width >=990px) {
+//     .top-menu {
+//         p {
+//             font-size: 3vw;
+//             font-family: "Playfair Display", serif;
+//         }
+//     }
+
+//     .boxes {
+//         width: 25vw;
+//     }
+
+//     .animations {
+//         p {
+//             font-size: 2vw;
+//         }
+//     }
+// }
+
+// .boxB {
+//     width: 50px;
+//     height: 50px;
+//     background: rgb(185, 44, 157);
+//     float: left;
+//     margin: 2px;
+// }
