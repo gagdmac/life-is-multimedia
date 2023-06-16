@@ -136,21 +136,31 @@ export class GsapExamplesComponent implements OnInit {
     tl.to(boxC1, {
       scale: 0,
       opacity: 0,
+      repeat:-1,
+      yoyoEase:true
     });
     tl.to(boxC2, {
       x: -50,
+        repeat:-1,
+      yoyoEase:true
     });
     tl.to(boxC3, {
       x: -90,
       rotate: 360,
+        repeat:-1,
+      yoyoEase:true
     });
     tl.set(boxC1, {
       x: 50,
+        repeat:-1,
+      yoyoEase:true
     });
     tl.to(boxC1, {
       scale: 1,
       opacity: 1,
       rotate: 1080,
+        repeat:-1,
+      yoyoEase:true
     });
   }
 }

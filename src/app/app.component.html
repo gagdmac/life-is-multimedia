@@ -1,34 +1,37 @@
-<header class="no-print cb1">
+<header class="no-print cb1 p-3">
   <!-- <a (click)="scroll(content)" class="skip-to-content pl-2 pr-2">Skip to main content</a> -->
     <app-topmenu></app-topmenu>
     <app-title></app-title>
 </header>
 
+<main class="container-fliud p-3">
 
-  <div class="row align-items-md-stretch">
-    <div class="col-md-2">
-      <div class="h-100 p-5 text-white bg-dark">
-      <section class="aside cb2">
-        <aside class="u-none-p no-print">
+
+  <section class="row">
+
+      <article class="aside cb2 col-md-2">
+        <aside class="u-none-p no-print h-100 p-5 text-white bg-dark">
           <app-side-menu></app-side-menu>
         </aside>
-      </section>
-      </div>
-    </div>
-    <div class="col-md-10">
-      <div class="h-100 p-5 bg-light border">
-        <section class="c-wrapper cb3">
-          <main #content id="content" class="">
-            <router-outlet>
-              <app-mouse-follower></app-mouse-follower>
-            </router-outlet>
-          </main>
-          <!-- <app-footer class="c-footer u-none-p no-print"></app-footer> -->
-        </section>
-      </div>
-    </div>
-  </div>
+      </article>
 
+ 
+      <article class="c-wrapper cb3 col-md-10">
+        <main #content id="content" class="h-100 p-5 bg-light border">
+          <router-outlet>
+            <!-- <app-mouse-follower></app-mouse-follower> -->
+          </router-outlet>
+        </main>
+        <!-- <app-footer class="c-footer u-none-p no-print"></app-footer> -->
+      </article>
+    
+    
+    </section>
+
+
+
+  </main>
+ 
 
 <!-- <section class="aside cb2">
   <aside class="u-none-p no-print">
