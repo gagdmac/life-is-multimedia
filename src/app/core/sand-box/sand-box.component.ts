@@ -21,25 +21,22 @@ export class SandBoxComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    const neonSquare =
-      this.elementRef.nativeElement.querySelectorAll(".neon-square");
-
-    tl.to(neonSquare, {
-      opacity: 1,
-      x: 100,
-      y: 150,
-      duration: 3,
-      ease: "bounce.out",
-      stagger: {
-        each: 0.2,
-        from: "random",
-      },
-    });
-
-    const navItem = this.elementRef.nativeElement.querySelector(".nav-item");
-
-    navItem.addEventListener("click", () => {
-      tl.pause();
-    });
+    //   const neonSquare =
+    //     this.elementRef.nativeElement.querySelectorAll(".neon-square");
+    //   tl.to(neonSquare, {
+    //     opacity: 1,
+    //     x: 100,
+    //     y: 150,
+    //     duration: 3,
+    //     ease: "bounce.out",
+    //     stagger: {
+    //       each: 0.2,
+    //       from: "random",
+    //     },
+    //   });
+    //   const navItem = this.elementRef.nativeElement.querySelector(".nav-item");
+    //   navItem.addEventListener("click", () => {
+    //     tl.pause();
+    //   });
   }
 }
