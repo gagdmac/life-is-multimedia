@@ -1,0 +1,74 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:svgjs="http://svgjs.dev/svgjs"
+  viewBox="150 150 500 500"
+>
+  <defs>
+    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="nnneon-grad">
+      <stop stop-color="#FF6DA0" stop-opacity="1" offset="0%"></stop>
+      <stop stop-color="#A06DFF" stop-opacity="1" offset="100%"></stop>
+    </linearGradient>
+    <filter
+      id="nnneon-filter"
+      x="-100%"
+      y="-100%"
+      width="600%"
+      height="600%"
+      filterUnits="objectBoundingBox"
+      primitiveUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB"
+    >
+      <feGaussianBlur
+        stdDeviation="43 30"
+        x="0%"
+        y="0%"
+        width="200%"
+        height="200%"
+        in="SourceGraphic"
+        edgeMode="none"
+        result="blur"
+      ></feGaussianBlur>
+    </filter>
+    <filter
+      id="nnneon-filter2"
+      x="-100%"
+      y="-100%"
+      width="600%"
+      height="600%"
+      filterUnits="objectBoundingBox"
+      primitiveUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB"
+    >
+      <feGaussianBlur
+        stdDeviation="29 20"
+        x="0%"
+        y="0%"
+        width="600%"
+        height="600%"
+        in="SourceGraphic"
+        edgeMode="none"
+        result="blur"
+      ></feGaussianBlur>
+    </filter>
+  </defs>
+  <g stroke-width="24.5" stroke="url(#nnneon-grad)" fill="none">
+    <circle r="144.5" cx="400" cy="400" filter="url(#nnneon-filter)"></circle>
+    <circle
+      r="144.5"
+      cx="411"
+      cy="400"
+      filter="url(#nnneon-filter2)"
+      opacity="0.49"
+    ></circle>
+    <circle
+      r="144.5"
+      cx="389"
+      cy="400"
+      filter="url(#nnneon-filter2)"
+      opacity="0.49"
+    ></circle>
+    <circle r="144.5" cx="400" cy="400"></circle>
+  </g>
+</svg>

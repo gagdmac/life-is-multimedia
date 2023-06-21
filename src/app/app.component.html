@@ -1,44 +1,22 @@
 <header class="no-print cb1 p-3">
   <!-- <a (click)="scroll(content)" class="skip-to-content pl-2 pr-2">Skip to main content</a> -->
-    <app-topmenu></app-topmenu>
-    <app-title></app-title>
+  <app-topmenu></app-topmenu>
+  <app-title></app-title>
 </header>
 
 <main class="container-fliud p-3">
-
-
   <section class="row">
- 
-        <aside class="aside cb2 col-md-2">
-          <app-side-menu></app-side-menu>
-        </aside>
+    <aside class="aside cb2 col-md-2">
+      <app-side-menu></app-side-menu>
+    </aside>
 
-      <article class="c-wrapper cb3 col-md-10">
-        <main #content id="content" class="h-100 p-5 bg-light border">
-          <router-outlet>
-            <!-- <app-mouse-follower></app-mouse-follower> -->
-          </router-outlet>
-        </main>
-        <!-- <app-footer class="c-footer u-none-p no-print"></app-footer> -->
-      </article>
-    </section>
-
-
-
-  </main>
- 
-
-<!-- <section class="aside cb2">
-  <aside class="u-none-p no-print">
-    <app-side-menu></app-side-menu>
-  </aside>
-</section>
-
-<section class="c-wrapper cb3">
-  <main #content id="content" class="">
-    <router-outlet>
-      <app-mouse-follower></app-mouse-follower>
-    </router-outlet>
-  </main>
-  <app-footer class="c-footer u-none-p no-print"></app-footer>
-</section> -->
+    <article class="c-wrapper cb3 col-md-10">
+      <main #content id="content" class="bg-light border">
+        <router-outlet>
+          <!-- <app-mouse-follower></app-mouse-follower> -->
+        </router-outlet>
+      </main>
+      <!-- <app-footer class="c-footer u-none-p no-print"></app-footer> -->
+    </article>
+  </section>
+</main>

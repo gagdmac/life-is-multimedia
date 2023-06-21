@@ -1,38 +1,6 @@
-// .content {
-//   position: relative;
-//   width: 100%;
-//   height: 300px;
-// }
+@import "../tools/tools";
 
-// .neon-square {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   pointer-events: none;
-// }
-
-.neon-square {
-  width: 100px;
-  height: 100px;
-}
-
-.neon-square rect {
-  fill: transparent;
-  stroke: #fff;
-  stroke-width: 2px;
-}
-
-.neon-square rect:hover {
-  animation: neon 1s ease-in-out infinite alternate;
-}
-
-@keyframes neon {
-  0% {
-    filter: drop-shadow(0 0 5px #fff) blur(10px);
-    box-shadow: 0 0 5px #fff;
-  }
-  100% {
-    filter: drop-shadow(0 0 20px #00c3ff) blur(20px);
-    box-shadow: 0 0 20px #00c3ff;
-  }
+.svg-shape {
+  @extend .svg;
+  background-image: url("../../assets/img/spiral-animation.svg");
 }
