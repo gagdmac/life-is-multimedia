@@ -20,6 +20,8 @@ export class SandBoxComponent implements OnInit {
       backgroundColor: ["#0000FF", "#FF0000"],
       duration: 1000,
       easing: "easeInOutQuad",
+      loop: true, // Enable loop
+      direction: "alternate", // Reverse animation on each loop iteratio
     });
   }
 }
