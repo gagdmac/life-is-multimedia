@@ -1,6 +1,12 @@
-@import "../tools/tools";
+// @import "../tools/tools";
 
-.svg-shape {
-  @extend .svg;
-  background-image: url("../../assets/img/square-graphic-design.svg");
+// .svg-shape {
+//   @extend .svg;
+//   background-image: url("../../assets/img/square-graphic-design.svg");
+// }
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
 }
