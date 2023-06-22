@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ElementRef } from "@angular/core";
 
 @Component({
-  selector: 'app-graphic-design-component',
-  templateUrl: './graphic-design-component.component.html',
-  styleUrls: ['./graphic-design-component.component.scss']
+  selector: "app-graphic-design-component",
+  templateUrl: "./graphic-design-component.component.html",
 })
-export class GraphicDesignComponentComponent {
+export class GraphicDesignComponentComponent implements OnInit {
+  constructor(private elementRef: ElementRef) {}
 
+  ngOnInit() {}
+
+  ngAfterViewInit() {}
 }

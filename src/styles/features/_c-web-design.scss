@@ -1,0 +1,6 @@
+@import "../tools/_tools";
+
+.svg-web-desing {
+  @extend .svg;
+  background-image: url("../../assets/img/circle-web-design.svg");
+}

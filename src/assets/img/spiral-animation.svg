@@ -102,10 +102,10 @@
 		<feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken" />
 
 		<!-- Use a gaussian blur to create the soft blurriness of the glow -->
-		<feGaussianBlur in="thicken" stdDeviation="3" result="blurred" />
+		<feGaussianBlur stdDeviation="3" result="blurred" />
 
 		<!-- Change the colour -->
-		<feFlood flood-color="rgb(255,186,255)" result="glowColor" />
+		<feFlood flood-color="rgb(255,255,52, .2)" result="glowColor" />
 
 		<!-- Color in the glows -->
 		<feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />

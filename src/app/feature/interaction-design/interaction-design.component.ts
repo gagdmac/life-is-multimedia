@@ -1,10 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-interaction-design',
-  templateUrl: './interaction-design.component.html',
-  styleUrls: ['./interaction-design.component.scss']
+  selector: "app-interaction-design",
+  templateUrl: "./interaction-design.component.html",
 })
-export class InteractionDesignComponent {
-
-}
+export class InteractionDesignComponent {}

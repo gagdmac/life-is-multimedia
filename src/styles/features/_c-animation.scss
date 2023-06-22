@@ -1,0 +1,6 @@
+@import "../tools/_tools";
+
+.svg-animation {
+  @extend .svg;
+  background-image: url("../../assets/img/spiral-animation.svg");
+}
