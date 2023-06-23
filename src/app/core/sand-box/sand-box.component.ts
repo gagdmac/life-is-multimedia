@@ -8,17 +8,38 @@ import anime from "animejs/lib/anime.es.js";
 export class SandBoxComponent implements OnInit {
   constructor(private elementRef: ElementRef) {}
 
+  // counter: number = 0;
+  // interval: any;
+
   ngOnInit() {}
 
+  // ngOnInit() {
+  //   this.interval = setInterval(() => {
+  //     if (this.counter < 100) {
+  //       this.counter++;
+  //     } else {
+  //       clearInterval(this.interval);
+  //     }
+  //   }, 100);
+  // }
+
+  // ngOnDestroy() {
+  //   clearInterval(this.interval);
+  // }
+
+  //test code 5 - counter
   ngAfterViewInit() {
-    const boxStats = this.elementRef.nativeElement.querySelector(".countUp");
+    const boxCount = this.elementRef.nativeElement.querySelector(".countUp");
 
     anime({
-      targets: "countUp",
-      value: 100,
+      targets: boxCount,
+      value: [0, 100, 0],
       round: 1,
       easing: "linear",
+      duration: 3000,
+      loop: true, // Enable loop
     });
+
     //test code 4
     // const squareElement =
     //   this.elementRef.nativeElement.querySelector(".square");
