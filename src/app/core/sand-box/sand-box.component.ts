@@ -66,6 +66,20 @@ export class SandBoxComponent implements OnInit {
       animation.reverse();
     };
 
+
+const getTimestamp = this.elementRef.nativeElement.querySelector(".timestamp");
+
+
+getTimestamp.oninput = function() {
+  animation.seek(getTimestamp.value)
+}
+
+const getScroller = this.elementRef.nativeElement.querySelector('.scroller')
+
+getScroller.oninput = function() {
+  animation.seek(animation.duration * (getScroller.value / 100))
+}
+
     //test code 9
     // const boxElement = this.elementRef.nativeElement.querySelectorAll(
     //   ".grid-container div"
