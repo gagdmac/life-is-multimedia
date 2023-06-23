@@ -11,21 +11,48 @@ export class SandBoxComponent implements OnInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    //test code 4
-    const squareElement =
-      this.elementRef.nativeElement.querySelector(".square");
-    const allE = this.elementRef.nativeElement.querySelectorAll("div");
+    const boxStats = this.elementRef.nativeElement.querySelector(".countUp");
 
     anime({
-      targets: [".box"],
-      translateX: "200px",
-      duration: 1000,
-      rotate: 145,
-      scale: 2,
-      easing: "easeInOutQuad",
-      loop: true, // Enable loop
-      direction: "alternate", // Reverse animation on each loop iteratio
+      targets: "countUp",
+      value: 100,
+      round: 1,
+      easing: "linear",
     });
+    //test code 4
+    // const squareElement =
+    //   this.elementRef.nativeElement.querySelector(".square");
+    // const allE = this.elementRef.nativeElement.querySelectorAll("div");
+
+    // const boxStats = this.elementRef.nativeElement.querySelector("#stats");
+    // const boxDistance = {
+    //   distance: 0,
+    //   progress: "0%",
+    // };
+
+    // anime({
+    //   targets: boxDistance,
+    //   distance: 300,
+    //   progress: "100%",
+    //   update: function () {
+    //     boxStats.innerHTML = JSON.stringify(boxDistance);
+    //     // boxStats.innerHTML = Object.values(boxDistance);
+    //     // boxStats.innerHTML = boxDistance.distance;
+    //   },
+    //   round: 1,
+    //   easing: "linear",
+    // });
+
+    // anime({
+    //   targets: [".box"],
+    //   translateX: "500px",
+    //   duration: 1000,
+    //   rotate: 145,
+    //   scale: 1.2,
+    //   easing: "easeInOutBack",
+    //   // loop: true, // Enable loop
+    //   // direction: "alternate", // Reverse animation on each loop iteratio
+    // });
 
     //test code 3
     // const squareElement =
