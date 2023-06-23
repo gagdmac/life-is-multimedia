@@ -40,7 +40,7 @@ export class SandBoxComponent implements OnInit {
       rotate: 90,
       delay: anime.stagger(500, {
         grid: [3, 3],
-        axis: "y",
+        from: "center",
       }),
       autoplay: false,
       loop: true,
