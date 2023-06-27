@@ -17,19 +17,32 @@ export class SandBoxComponent implements OnInit {
 
   animateMorphing() {
     anime({
-      targets: this.elementRef.nativeElement.querySelectorAll('.morphing-demo .polymorph'),
+      targets: this.elementRef.nativeElement.querySelectorAll(
+        ".morphing-demo .polymorph"
+      ),
       points: [
-        { value: [
-          '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369',
-          '70 41 118.574 59.369 111.145 132.631 60.855 84.631 20.426 60.369']
+        {
+          value: [
+            "70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369",
+            "70 41 118.574 59.369 111.145 132.631 60.855 84.631 20.426 60.369",
+          ],
         },
-        { value: '70 6 119.574 60.369 100.145 117.631 39.855 117.631 55.426 68.369' },
-        { value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
-        { value: '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369' }
+        {
+          value:
+            "70 6 119.574 60.369 100.145 117.631 39.855 117.631 55.426 68.369",
+        },
+        {
+          value:
+            "70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369",
+        },
+        {
+          value:
+            "70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369",
+        },
       ],
-      easing: 'easeOutQuad',
+      easing: "easeOutQuad",
       duration: 2000,
-      loop: true
+      loop: true,
     });
   }
 
@@ -48,9 +61,6 @@ export class SandBoxComponent implements OnInit {
   // }
 
   ngAfterViewInit() {
-
-    
-
     //test code 10
     const gridElements = Array.from(
       this.elementRef.nativeElement.querySelectorAll(".grid-container div")
@@ -65,7 +75,7 @@ export class SandBoxComponent implements OnInit {
         grid: [3, 3],
         from: "center",
       }),
-      autoplay: false,
+      // autoplay: false,
       loop: true,
     });
 
@@ -89,19 +99,19 @@ export class SandBoxComponent implements OnInit {
       animation.reverse();
     };
 
+    const getTimestamp =
+      this.elementRef.nativeElement.querySelector(".timestamp");
 
-const getTimestamp = this.elementRef.nativeElement.querySelector(".timestamp");
+    getTimestamp.oninput = function () {
+      animation.seek(getTimestamp.value);
+    };
 
+    const getScroller =
+      this.elementRef.nativeElement.querySelector(".scroller");
 
-getTimestamp.oninput = function() {
-  animation.seek(getTimestamp.value)
-}
-
-const getScroller = this.elementRef.nativeElement.querySelector('.scroller')
-
-getScroller.oninput = function() {
-  animation.seek(animation.duration * (getScroller.value / 100))
-}
+    getScroller.oninput = function () {
+      animation.seek(animation.duration * (getScroller.value / 100));
+    };
 
     //test code 9
     // const boxElement = this.elementRef.nativeElement.querySelectorAll(
