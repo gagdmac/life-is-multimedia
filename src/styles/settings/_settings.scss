@@ -36,6 +36,13 @@
     url("../../assets/fonts/Sacramento-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "dancing";
+  src: local("dancing"),
+    url("../../assets/fonts/DancingScript-VariableFont_wght.ttf")
+      format("truetype");
+}
+
 // font-family: 'Cherry Bomb One', cursive;
 // font-family: 'Exo 2', sans-serif;
 // font-family: 'Playfair Display', serif;
@@ -48,7 +55,6 @@
 /*background colors*/
 // $headers-background: #0D3C61;
 
-
 //nav
 
 /*fonts*/
@@ -57,9 +63,7 @@
 
 //sidemenu
 
-
 //backgrounds
-
 
 //BOX_SHADOW
 
@@ -71,7 +75,6 @@ $f-style: rem-calc(-3);
 
 //Footer
 
-
 //scrollbar
 $webkit-scrollbar-track: #f1f1f1;
 $webkit-scrollbar-thumb: #aaa;
@@ -79,12 +82,78 @@ $webkit-scrollbar-thumb-hover: #555;
 
 //PANEL
 
-
 //Borders
-
 
 //BOTONES
 
 //secondary buttons
 
+//////////////////////////////////////////////////////////
+////////////////// Variables ////////////////////////////
+////////////////////////////////////////////////////////
 
+:root {
+  //Custom Variables
+  --font-size: rem-calc(16);
+  --text-color: #212529;
+  --text-color-secondary: #222222;
+
+  // primary color
+  --primary-color: #005fae;
+  --primary-color-hover: #d4e3ff;
+  --primary-color-text: #ffffff;
+  --primary-color-text-hover: #001c3a;
+
+  // secondary color
+  --secondary-color: #446900;
+  --secondary-color-hover: #b4f64c;
+  --secondary-color-text: #ffffff;
+  --secondary-color-text-hover: #121f00;
+
+  --font-family: Roboto, Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+  --font-family-secondary: PFD, Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+
+  --border-inputs: #666666;
+
+  --surface-a: #ffffff;
+  --surface-b: #efefef;
+  --surface-c: #e9ecef;
+  --surface-d: #dee2e6;
+  --surface-e: #ffffff;
+  --surface-f: #ffffff;
+  --surface-0: #ffffff;
+  --surface-50: #f9fafb;
+  --surface-100: #f8f9fa;
+  --surface-200: #e9ecef;
+  --surface-300: #dee2e6;
+  --surface-400: #ced4da;
+  --surface-500: #adb5bd;
+  --surface-600: #222222;
+  --surface-700: #495057;
+  --surface-800: #343a40;
+  --surface-900: #212529;
+  --gray-50: #f9fafb;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #222222;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --content-padding: 1.25rem;
+  --inline-spacing: 0.5rem;
+  --border-radius: 4px;
+  --surface-ground: #efefef;
+  --surface-section: #ffffff;
+  --surface-card: #ffffff;
+  --surface-overlay: #ffffff;
+  --surface-border: #dee2e6;
+  --surface-hover: #e9ecef;
+  --maskbg: rgba(0, 0, 0, 0.4);
+  --highlight-bg: #005fae;
+  --highlight-text-color: #ffffff;
+  --focus-ring: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  color-scheme: light;
+}

@@ -197,7 +197,7 @@ a[href]:focus-visible {
 
 html,
 body {
-  font-family: Roboto, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-family: var(--font-family);
   min-height: 100vh;
   overflow: auto !important;
 }
